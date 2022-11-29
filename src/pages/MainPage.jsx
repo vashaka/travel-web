@@ -8,7 +8,6 @@ import { WyndhamBatumiImages } from "../data/HotelImages";
 const MainPage = () => {
   return (
     <div>
-      <Navbar />
       <ImageSlider slides={SliderData} />
       <div className="max-w-[1240px] m-auto py-16 px-4 text-center">
         <h1>Choose Your Hotel</h1>

@@ -17,6 +17,31 @@
     @apply md:p-4 p-2;
   }
 }
+.activeNavbarButton {
+  width: 10em;
+  height: 5ex;
+  /* background-image: linear-gradient(135deg, #4d4245 40%, #463024); prev colors */
+  background-image: linear-gradient(135deg, hsl(338, 71%, 53%) 40%, #f51767);
+
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+}
+.activeGeorgia {
+  width: 10em;
+  height: 5ex;
+  /* background-image: linear-gradient(135deg, #4d4245 40%, #463024); prev colors */
+  background-image: linear-gradient(135deg, hsl(338, 71%, 53%) 40%, #f51767);
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+}
 
 .slider {
   position: relative;
@@ -36,3 +61,54 @@
   transition-duration: 2s;
   transform: scale(1.08);
 }
+
+.cart-btn {
+  border: 1px solid rgb(245, 23, 103);
+  outline: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  width: max-content;
+  border-radius: 999px;
+  height: 40px;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 0px 40px;
+  background-color: #f51767;
+  color: rgb(255, 255, 255);
+}
+
+.cart-btn:hover {
+  border-color: rgb(187, 32, 88);
+  background-color: #bb2058;
+}
+
+/* .cart-btnActive {
+  border-color: rgb(187, 32, 88);
+  background-color: rgb(187, 32, 88);
+
+  border: 1px solid rgb(187, 32, 88);
+  outline: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  width: max-content;
+  border-radius: 999px;
+  height: 40px;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 0px 40px;
+  color: rgb(255, 255, 255);
+} */

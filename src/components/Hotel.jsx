@@ -20,7 +20,7 @@ const Hotel = ({
   const starsOfHotel = Number(stars);
   return (
     <div
-      className="w-full h-[375px] object-cover"
+      className="cursor-pointer	hover:scale-105 ease-in duration-300 w-full h-[375px] object-cover"
       style={{
         borderRadius: "25px",
         border: "3px solid rgb(255, 255, 255)",
@@ -28,12 +28,7 @@ const Hotel = ({
       }}
     >
       <p className="">{HotelTitle}</p>
-      {/* <div className="round"></div> */}
-      {/* main base Hotel Image */}
       <div className="flex justify-center">
-        {/* {starsOfHotel.map((star) => (
-              <RiStarSFill />
-            ))} */}
         {starsOfHotel === 2 && (
           <>
             <RiStarSFill />
