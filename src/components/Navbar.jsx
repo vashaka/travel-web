@@ -53,8 +53,6 @@ const Navbar = () => {
             MATCH
           </NavLink>
         </li> */}
-        {/* Match or Cart Btn */}
-        {/* Match or Cart Btn */}
         <button className="cart-btn">
           <NavLink activeClassName="cart-btnActive" exact={true} to="/match">
             MATCH
