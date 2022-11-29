@@ -12,7 +12,7 @@ const Navbar = () => {
         <li className="cursor-pointer	hover:scale-110 ease-in duration-300"><NavLink activeClassName="activeGeorgia" exact={true} to="/">MAIN</NavLink></li>
         <li className="cursor-pointer	hover:scale-110 ease-in duration-300"><NavLink activeClassName="activeGeorgia" exact={true}  to="/georgia">GEORGIA</NavLink></li>
         <li className="cursor-pointer	hover:scale-110 ease-in duration-300"><NavLink activeClassName="activeNavbarButton" exact={true}  to="/trips">TRIPS</NavLink></li>
-        <li className="cursor-pointer	hover:scale-110 ease-in duration-300"><NavLink activeClassName="activeNavbarButton" exact={true}  to="/hotles">HOTELS</NavLink></li>
+        <li className="cursor-pointer	hover:scale-110 ease-in duration-300"><NavLink activeClassName="activeNavbarButton" exact={true}  to="/hotels">HOTELS</NavLink></li>
         <li className="cursor-pointer	hover:scale-110 ease-in duration-300"><NavLink activeClassName="activeNavbarButton" exact={true}  to="/cars">CARS</NavLink></li>
         <li className="cursor-pointer	hover:scale-110 ease-in duration-300"><NavLink activeClassName="activeNavbarButton" exact={true}  to="/match">MATCH</NavLink></li>
       </ul>
