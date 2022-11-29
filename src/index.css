@@ -9,6 +9,29 @@
     @apply font-[Poppins];
   }
 
+  .activeNavbarButton {
+    width: 10em;
+    height: 5ex;
+    background-image: linear-gradient(135deg, #4d4245 40%, #463024);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+  }
+  .activeGeorgia {
+    width: 10em;
+    height: 5ex;
+    background-image: linear-gradient(135deg, #4d4245 40%, #463024);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+  }
+
   h1 {
     @apply text-xl md:text-4xl font-bold;
   }

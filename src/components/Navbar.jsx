@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -8,10 +9,11 @@ const Navbar = () => {
       </div>
 
       <ul className="flex">
-        <li className="cursor-pointer	hover:scale-110 ease-in duration-300 hidden md:flex">GEORGIA</li>
-        <li className="cursor-pointer	hover:scale-110 ease-in duration-300">HOTELS</li>
-        <li className="cursor-pointer	hover:scale-110 ease-in duration-300">CARS</li>
-        <li className="cursor-pointer	hover:scale-110 ease-in duration-300">MATCH</li>
+        <li className="cursor-pointer	hover:scale-110 ease-in duration-300 "><NavLink activeClassName="activeGeorgia" to="/georgia">GEORGIA</NavLink></li>
+        <li className="cursor-pointer	hover:scale-110 ease-in duration-300"><NavLink activeClassName="activeNavbarButton" to="/trips">TRIPS</NavLink></li>
+        <li className="cursor-pointer	hover:scale-110 ease-in duration-300"><NavLink activeClassName="activeNavbarButton" to="/hotles">HOTELS</NavLink></li>
+        <li className="cursor-pointer	hover:scale-110 ease-in duration-300"><NavLink activeClassName="activeNavbarButton" to="/cars">CARS</NavLink></li>
+        <li className="cursor-pointer	hover:scale-110 ease-in duration-300"><NavLink activeClassName="activeNavbarButton" to="/match">MATCH</NavLink></li>
       </ul>
     </div>
   );
