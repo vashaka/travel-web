@@ -6,7 +6,7 @@ const styles = {
   img: "h-full rounded-lg hover:scale-110",
 };
 
-const Hotel = ({
+const Plan = ({
   HotelTitle,
   HotelSelectedImage,
   stars,
@@ -20,7 +20,7 @@ const Hotel = ({
   const starsOfHotel = Number(stars);
   return (
     <div
-      className="cursor-pointer	hover:scale-105 ease-in duration-300 w-full h-[375px] object-cover"
+      className="cursor-pointer	md:hover:scale-105 ease-in duration-300 w-full h-[375px] object-cover"
       style={{
         borderRadius: "25px",
         border: "3px solid rgb(255, 255, 255)",
@@ -105,4 +105,4 @@ const Hotel = ({
   );
 };
 
-export default Hotel;
+export default Plan;

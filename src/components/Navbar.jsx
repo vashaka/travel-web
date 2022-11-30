@@ -55,7 +55,7 @@ const Navbar = () => {
         </li> */}
 
         {/* This is not main branch */}
-        <button className="cart-btn">
+        <button className="cart-btn ml-2">
           <NavLink activeClassName="cart-btnActive" exact={true} to="/match">
             MATCH
           </NavLink>
