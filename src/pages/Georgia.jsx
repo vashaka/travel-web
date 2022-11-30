@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Georgia = () => {
-  return (
-    <div>Georgia</div>
-  )
-}
+  return <h1 className="mt-20">Georgia</h1>;
+};
 
-export default Georgia
+export default Georgia;
