@@ -46,7 +46,7 @@ const ImageSlider = ({ slides }) => {
             {index === current && (
               <img
                 src={slide.image}
-                className="md:h-[600px] md:w-[1000px] w-[100px] h-auto rounded-[10px]"
+                className="w-full p-6 md:p-0 md:h-[600px] md:w-[1000px] h-auto rounded-[10px]"
                 alt="Georgia"
               />
             )}

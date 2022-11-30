@@ -18,46 +18,22 @@ const MainPage = () => {
         <h1 className="text-3xl md:text-4xl text-[#f51767]">
           Choose Your Plan
         </h1>
-        <p className="text-xl">Tap on your favourite and see it on the map</p>
+        <p className="text-xl">Tap on your favourite and check it on the map</p>
         <div className="grid grid-rows-none md:grid-cols-2 lg:grid-cols-3 py-4 gap-2 md:gap-4">
           <div className="w-full col-span-2 md:col-span-1 row-span-1 xl:col-span-1 relative">
-            <Plan
-              PlanTitle="Standard"
-              stars="5"
-              HotelSelectedImage={WyndhamBatumiImages[0].image}
-              HotelImages={WyndhamBatumiImages}
-              priceOnOneDay="170"
-              reviews="1,341"
-              rating="8.6"
-            />
+            <Plan PlanTitle="Standard" />
           </div>
           <div
             // className="w-full h-[350px] object-cover col-span-1 md:col-span-1 row-span-1 lg:col-span-1"
             className="w-full col-span-2 md:col-span-1 row-span-1 xl:col-span-1"
           >
-            <Plan
-              PlanTitle="Premium"
-              stars="3"
-              HotelSelectedImage={WyndhamBatumiImages[0].image}
-              HotelImages={WyndhamBatumiImages}
-              priceOnOneDay="170"
-              reviews="1,341"
-              rating="8.6"
-            />
+            <Plan PlanTitle="Premium" />
           </div>
           <div
             // className="w-full h-[350px] object-cover col-span-1 md:col-span-1 row-span-1 lg:col-span-1"
             className="w-full col-span-2 md:col-span-2 row-span-1 lg:col-span-1"
           >
-            <Plan
-              PlanTitle="Premium"
-              stars="3"
-              HotelSelectedImage={WyndhamBatumiImages[0].image}
-              HotelImages={WyndhamBatumiImages}
-              priceOnOneDay="170"
-              reviews="1,341"
-              rating="8.6"
-            />
+            <Plan PlanTitle="Premium" />
           </div>
         </div>
       </div>
