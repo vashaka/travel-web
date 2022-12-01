@@ -1,9 +1,14 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { AppActions } from "../redux";
 
 const Plan = ({ PlanTitle }) => {
+  const dispatch = useDispatch();
+
   return (
     <div
-      className="md:hover:scale-105 ease-in duration-300 w-full h-[auto] object-cover"
+      onClick={() => dispatch(AppActions.setActivePlan(PlanTitle))}
+      className="hover:scale-105 cursor-pointer ease-in duration-300 w-full h-[auto] object-cover"
       style={{
         borderRadius: "25px",
         border: "3px solid rgb(255, 255, 255)",

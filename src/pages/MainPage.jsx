@@ -4,16 +4,15 @@ import ImageSlider from "../components/ImageSlider";
 import Navbar from "../components/Navbar";
 import { SliderData } from "../data/SliderData";
 import { WyndhamBatumiImages } from "../data/HotelImages";
-import GEO_MAP from "../data/GEO_MAP.png";
 import Plan from "../components/Plan";
+import GeoMap from "../components/GeoMap";
 
 const MainPage = () => {
   return (
     <div>
       <ImageSlider slides={SliderData} />
-      <div className="flex justify-center">
-        <img src={GEO_MAP} alt="geo-map" width={800} />
-      </div>
+      <GeoMap />
+
       <div className="max-w-[1240px] m-auto py-16 px-4 text-center z-10">
         <h1 className="text-3xl md:text-4xl text-[#f51767]">
           Choose Your Plan
@@ -33,7 +32,7 @@ const MainPage = () => {
             // className="w-full h-[350px] object-cover col-span-1 md:col-span-1 row-span-1 lg:col-span-1"
             className="w-full col-span-2 md:col-span-2 row-span-1 lg:col-span-1"
           >
-            <Plan PlanTitle="Premium" />
+            <Plan PlanTitle="VIP" />
           </div>
         </div>
       </div>
