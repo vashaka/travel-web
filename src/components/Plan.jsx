@@ -1,9 +1,10 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { AppActions } from "../redux";
 
 const Plan = ({ PlanTitle }) => {
   const dispatch = useDispatch();
+  const ActivePlan = useSelector((state) => state.ActivePlan);
 
   return (
     <div
@@ -13,6 +14,8 @@ const Plan = ({ PlanTitle }) => {
         borderRadius: "25px",
         border: "3px solid rgb(255, 255, 255)",
         boxShadow: "rgb(19 15 235 / 15%) 1px 2px 20px",
+        // backgroundColor: PlanTitle === ActivePlan ? "red" : "",
+        border: PlanTitle === ActivePlan ? "3px solid rgb(245, 23, 103)" : "",
       }}
     >
       <p className="">{PlanTitle}</p>

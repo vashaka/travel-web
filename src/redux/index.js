@@ -1,13 +1,14 @@
 import { createSlice, configureStore } from "@reduxjs/toolkit";
 
-const initialState = { ActivePlane: "Standard" };
+// Hard Coded ActivePlan
+const initialState = { ActivePlan: "VIP" };
 
 const AppSlice = createSlice({
   name: "AppSlice",
   initialState,
   reducers: {
     setActivePlan(state, action) {
-      state.ActivePlane = action.payload;
+      state.ActivePlan = action.payload;
     },
   },
 });

@@ -6,6 +6,7 @@ import { SliderData } from "../data/SliderData";
 import { WyndhamBatumiImages } from "../data/HotelImages";
 import Plan from "../components/Plan";
 import GeoMap from "../components/GeoMap";
+import { Link } from "react-scroll";
 
 const MainPage = () => {
   return (
@@ -14,34 +15,36 @@ const MainPage = () => {
       <GeoMap />
 
       <div className="max-w-[1240px] m-auto py-16 px-4 text-center z-10">
-        <h1 className="text-3xl md:text-4xl text-[#f51767]">
-          Choose Your Plan
-        </h1>
-        <p className="text-xl">Tap on your favourite and check it on the map</p>
+        <h1 className="text-3xl text-[#f51767]">Choose Your Plan</h1>
+        <p className="text-lg">Tap on your favourite and check it on the map</p>
         <div className="grid grid-rows-none md:grid-cols-2 lg:grid-cols-3 py-4 gap-2 md:gap-4">
           <div className="w-full col-span-2 md:col-span-1 row-span-1 xl:col-span-1 relative">
-            <Plan PlanTitle="Standard" />
+            <Link to="Map" smooth={true} duration={500}>
+              <Plan PlanTitle="Standard" />
+            </Link>
           </div>
           <div
             // className="w-full h-[350px] object-cover col-span-1 md:col-span-1 row-span-1 lg:col-span-1"
             className="w-full col-span-2 md:col-span-1 row-span-1 xl:col-span-1"
           >
-            <Plan PlanTitle="Premium" />
+            <Link to="Map" smooth={true} duration={500}>
+              <Plan PlanTitle="VIP" />
+            </Link>
           </div>
           <div
             // className="w-full h-[350px] object-cover col-span-1 md:col-span-1 row-span-1 lg:col-span-1"
             className="w-full col-span-2 md:col-span-2 row-span-1 lg:col-span-1"
           >
-            <Plan PlanTitle="VIP" />
+            <Link to="Map" smooth={true} duration={500}>
+              <Plan PlanTitle="Premium" />
+            </Link>
           </div>
         </div>
       </div>
 
       <div className="max-w-[1240px] m-auto py-16 px-4 text-center">
-        <h1 className="text-3xl md:text-4xl text-[#f51767]">
-          Choose Your Hotel
-        </h1>
-        <p className="text-xl">Tap on your favourite</p>
+        <h1 className="text-3xl text-[#f51767]">Choose Your Hotel</h1>
+        <p className="text-lg">Tap on your favourite</p>
         <div className="grid grid-rows-none md:grid-cols-2 lg:grid-cols-3 py-4 gap-2 md:gap-4">
           <div className="w-full col-span-2 md:col-span-1 row-span-1 xl:col-span-1 relative">
             <Hotel
