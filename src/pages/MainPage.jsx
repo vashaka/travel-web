@@ -19,7 +19,7 @@ const MainPage = () => {
         <p className="text-lg">Tap on your favourite and check it on the map</p>
         <div className="grid grid-rows-none md:grid-cols-2 lg:grid-cols-3 py-4 gap-2 md:gap-4">
           <div className="w-full col-span-2 md:col-span-1 row-span-1 xl:col-span-1 relative">
-            <Link to="Map" smooth={true} duration={500}>
+            <Link to="Map" smooth={true} duration={300}>
               <Plan PlanTitle="Standard" />
             </Link>
           </div>
@@ -27,7 +27,7 @@ const MainPage = () => {
             // className="w-full h-[350px] object-cover col-span-1 md:col-span-1 row-span-1 lg:col-span-1"
             className="w-full col-span-2 md:col-span-1 row-span-1 xl:col-span-1"
           >
-            <Link to="Map" smooth={true} duration={500}>
+            <Link to="Map" smooth={true} duration={300}>
               <Plan PlanTitle="VIP" />
             </Link>
           </div>
@@ -35,7 +35,7 @@ const MainPage = () => {
             // className="w-full h-[350px] object-cover col-span-1 md:col-span-1 row-span-1 lg:col-span-1"
             className="w-full col-span-2 md:col-span-2 row-span-1 lg:col-span-1"
           >
-            <Link to="Map" smooth={true} duration={500}>
+            <Link to="Map" smooth={true} duration={300}>
               <Plan PlanTitle="Premium" />
             </Link>
           </div>

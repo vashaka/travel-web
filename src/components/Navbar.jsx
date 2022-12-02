@@ -14,7 +14,7 @@ const Navbar = () => {
         borderBottom: "0.5px solid hsl(0, 0%, 88%)",
       }}
     >
-      <div className="flex items-center justify-between h-20 px-4 bg-white">
+      <div className="flex items-center justify-between h-14 px-4 bg-white">
         <div>
           <h1 className="cursor-pointer	hover:scale-110 ease-in duration-300 text-[#f51767]">
             <Link to="/">BREATHE.</Link>

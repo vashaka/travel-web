@@ -13,7 +13,7 @@ const GeoMap = () => {
         textForSmoothScroll
       </h1>
       {/* ----------- */}
-      <h1 className="absolute" name="Map">
+      <h1 className="absolute text-[#f51767]" name="Map">
         {ActivePlan}
       </h1>
       <img src={GEO_MAP} alt="geo-map" width={800} />
