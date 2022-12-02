@@ -1,7 +1,12 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
+import useReadingProgress from "../hooks/useReadingProgress";
 
 const Navbar = () => {
+  const completion = useReadingProgress();
+
+  console.log(completion);
+
   return (
     <div
       className="z-20"
@@ -59,23 +64,17 @@ const Navbar = () => {
               CARS
             </NavLink>
           </li>
-          {/* <li className="cursor-pointer	hover:scale-110 ease-in duration-300">
-          <NavLink
-            activeClassName="activeNavbarButton"
-            exact={true}
-            to="/match"
-          >
-            MATCH
-          </NavLink>
-        </li> */}
-
-          {/* This is not main branch */}
           <button className="cart-btn ml-2">
             <NavLink activeClassName="cart-btnActive" exact={true} to="/match">
               MATCH
             </NavLink>
           </button>
         </ul>
+
+        <span
+          className="absolute bg-[#f51767] h-1 w-full bottom-0 ease-in duration-0"
+          style={{ transform: `translateX(${completion - 100}%)` }}
+        />
       </div>
     </div>
   );

@@ -71,6 +71,7 @@ const Hotel = ({
       <div className="grid grid-flow-col gap-0 mt-1">
         {HotelImages?.map((HotelImage) => (
           <img
+            key={HotelImage.image}
             src={HotelImage.image}
             width={70}
             alt=""
