@@ -20,7 +20,7 @@ const Hotel = ({
   const starsOfHotel = Number(stars);
   return (
     <div
-      className="cursor-pointer	hover:scale-105 ease-in duration-300 w-full h-[375px] object-cover"
+      className="cursor-pointer	md:hover:scale-105 ease-in duration-300 w-full h-[375px] object-cover"
       style={{
         borderRadius: "25px",
         border: "3px solid rgb(255, 255, 255)",

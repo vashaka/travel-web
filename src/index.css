@@ -17,6 +17,7 @@
     @apply md:p-4 p-2;
   }
 }
+
 .activeNavbarButton {
   width: 10em;
   height: 5ex;
