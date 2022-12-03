@@ -114,3 +114,8 @@
   padding: 0px 40px;
   color: rgb(255, 255, 255);
 } */
+
+.progressMainStyle {
+  height: 5px;
+  background: #00cc83;
+}

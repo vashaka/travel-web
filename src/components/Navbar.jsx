@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
-import useReadingProgress from "../hooks/useReadingProgress";
 
 const Navbar = () => {
-  const completion = useReadingProgress();
+  const [scrollTop, setScrollTop] = useState(0);
 
-  console.log(completion);
+  const onScroll = () => {
+    const winScroll = document.documentElement.scrollTop;
+    const height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+
+    const scrolled = (winScroll / height) * 100;
+    setScrollTop(scrolled);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
 
   return (
     <div
@@ -71,13 +86,10 @@ const Navbar = () => {
           </button>
         </ul>
 
-        {/* <span
-          className="absolute bg-[#f51767] h-1 w-full bottom-0"
-          style={{
-            transform: `translateX(${completion - 100}%)`,
-            scrollBehavior: "smooth",
-          }}
-        /> */}
+        <div
+          className="progressMainStyle absolute bottom-0 left-0"
+          style={{ width: `${scrollTop}%` }}
+        ></div>
       </div>
     </div>
   );
