@@ -75,6 +75,7 @@ const Navbar = () => {
           className="absolute bg-[#f51767] h-1 w-full bottom-0"
           style={{
             transform: `translateX(${completion - 100}%)`,
+            scrollBehavior: "smooth",
           }}
         /> */}
       </div>
