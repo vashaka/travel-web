@@ -14,6 +14,7 @@ const Hotel = ({
   priceOnOneDay,
   reviews,
   rating,
+  checkForMediumScreen,
 }) => {
   const [selectedimg, setSelectedImg] = React.useState(HotelSelectedImage);
 
@@ -68,18 +69,36 @@ const Hotel = ({
           className="rounded-xl mt-2"
         />
       </div>
-      <div className="grid grid-flow-col gap-0 mt-1">
-        {HotelImages?.map((HotelImage) => (
-          <img
-            key={HotelImage.image}
-            src={HotelImage.image}
-            width={70}
-            alt=""
-            className={styles.img}
-            onMouseEnter={() => setSelectedImg(HotelImage.image)}
-          />
-        ))}
-      </div>
+      {/* Making responsive 3rd card */}
+
+      {checkForMediumScreen && (
+        <div className="grid grid-flow-col gap-0 mt-1 md:px-40 lg:px-0">
+          {HotelImages?.map((HotelImage) => (
+            <img
+              key={HotelImage.image}
+              src={HotelImage.image}
+              width={70}
+              alt=""
+              className={styles.img}
+              onMouseEnter={() => setSelectedImg(HotelImage.image)}
+            />
+          ))}
+        </div>
+      )}
+      {!checkForMediumScreen && (
+        <div className="grid grid-flow-col gap-0 mt-1">
+          {HotelImages?.map((HotelImage) => (
+            <img
+              key={HotelImage.image}
+              src={HotelImage.image}
+              width={70}
+              alt=""
+              className={styles.img}
+              onMouseEnter={() => setSelectedImg(HotelImage.image)}
+            />
+          ))}
+        </div>
+      )}
       <div className="flex justify-start mt-[3px] mx-4 md:mx-1">
         <p className="text-sm text-gray-400">1 night, 2 adults</p>
       </div>
@@ -101,7 +120,6 @@ const Hotel = ({
           <p className="text-[#ededed] font-medium">{rating}</p>
         </div>
       </div>
-      <button className="">Add to Cart</button>
     </div>
   );
 };

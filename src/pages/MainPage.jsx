@@ -15,7 +15,9 @@ const MainPage = () => {
 
       <div className="max-w-[1240px] m-auto py-16 px-4 text-center z-10">
         <h1 className="text-3xl text-[#f51767]">Choose Your Plan</h1>
-        <p className="text-lg">Tap on your favourite and check it on the map</p>
+        <p className="text-lg">
+          Tap on your favourite and check Landmarks on the map
+        </p>
         <div className="grid grid-rows-none md:grid-cols-2 lg:grid-cols-3 py-4 gap-2 md:gap-4">
           <div className="w-full col-span-2 md:col-span-1 row-span-1 xl:col-span-1 relative">
             <Link to="Map" smooth={true} duration={300}>
@@ -82,6 +84,7 @@ const MainPage = () => {
               priceOnOneDay="170"
               reviews="1,341"
               rating="8.6"
+              checkForMediumScreen={true}
             />
           </div>
         </div>

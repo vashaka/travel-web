@@ -19,8 +19,7 @@ const Plan = ({ PlanTitle, amountOfLandmarks }) => {
       }}
     >
       <p className="">{PlanTitle}</p>
-      <p>Locations</p>
-      <p className="opacity-30">What you'll see</p>
+      <p className="opacity-30">What You'll Get</p>
       <p>up to {amountOfLandmarks} Landmarks</p>
     </div>
   );
