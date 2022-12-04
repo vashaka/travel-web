@@ -1,7 +1,6 @@
 import React from "react";
 import Hotel from "../components/Hotel";
 import ImageSlider from "../components/ImageSlider";
-import Navbar from "../components/Navbar";
 import { SliderData } from "../data/SliderData";
 import { WyndhamBatumiImages } from "../data/HotelImages";
 import Plan from "../components/Plan";
@@ -20,7 +19,7 @@ const MainPage = () => {
         <div className="grid grid-rows-none md:grid-cols-2 lg:grid-cols-3 py-4 gap-2 md:gap-4">
           <div className="w-full col-span-2 md:col-span-1 row-span-1 xl:col-span-1 relative">
             <Link to="Map" smooth={true} duration={300}>
-              <Plan PlanTitle="Standard" />
+              <Plan PlanTitle="Standard" amountOfLandmarks="3" />
             </Link>
           </div>
           <div
@@ -28,7 +27,7 @@ const MainPage = () => {
             className="w-full col-span-2 md:col-span-1 row-span-1 xl:col-span-1"
           >
             <Link to="Map" smooth={true} duration={300}>
-              <Plan PlanTitle="VIP" />
+              <Plan PlanTitle="Premium" amountOfLandmarks="5" />
             </Link>
           </div>
           <div
@@ -36,7 +35,7 @@ const MainPage = () => {
             className="w-full col-span-2 md:col-span-2 row-span-1 lg:col-span-1"
           >
             <Link to="Map" smooth={true} duration={300}>
-              <Plan PlanTitle="Premium" />
+              <Plan PlanTitle="VIP" amountOfLandmarks="7" />
             </Link>
           </div>
         </div>

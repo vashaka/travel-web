@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AppActions } from "../redux";
 
-const Plan = ({ PlanTitle }) => {
+const Plan = ({ PlanTitle, amountOfLandmarks }) => {
   const dispatch = useDispatch();
   const ActivePlan = useSelector((state) => state.ActivePlan);
 
@@ -21,6 +21,7 @@ const Plan = ({ PlanTitle }) => {
       <p className="">{PlanTitle}</p>
       <p>Locations</p>
       <p className="opacity-30">What you'll see</p>
+      <p>up to {amountOfLandmarks} Landmarks</p>
     </div>
   );
 };
