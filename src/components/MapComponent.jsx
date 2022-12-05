@@ -13,14 +13,26 @@ const MapComponent = () => {
   console.log(coordinates.x);
 
   return (
-    <div className="flex justify-center">
-      <GoogleMap
-        zoom={8}
-        center={{ lat: coordinates.x, lng: coordinates.y }}
-        style={{ width: "50%", height: "100%" }}
-        mapContainerClassName="map-container"
-      ></GoogleMap>
-    </div>
+    <>
+      <div className="hidden lg:flex justify-center">
+        <GoogleMap
+          zoom={8}
+          center={{ lat: coordinates.x, lng: coordinates.y }}
+          mapContainerClassName="map-container"
+          className="w-[180%] h-[80vh]"
+        ></GoogleMap>
+      </div>
+
+      {/* for small screens */}
+      <div className="flex lg:hidden justify-center">
+        <GoogleMap
+          zoom={7}
+          center={{ lat: coordinates.x, lng: coordinates.y }}
+          mapContainerClassName="map-container-for-small-screens"
+          className="w-[180%] h-[80vh]"
+        ></GoogleMap>
+      </div>
+    </>
   );
 };
 
