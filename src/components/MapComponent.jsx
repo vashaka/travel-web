@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 const MapComponent = () => {
   const coordinates = useSelector((state) => state.coordinates);
+  const qutaisi = useSelector((state) => state.qutaisi);
 
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: "AIzaSyCzTm9ZhDTvk1dTqrtD1F2YYcWk9WbHQ7o",
@@ -16,7 +17,7 @@ const MapComponent = () => {
     <>
       <div className="hidden lg:flex justify-center">
         <GoogleMap
-          zoom={8}
+          zoom={coordinates.zoomLevel}
           center={{ lat: coordinates.x, lng: coordinates.y }}
           mapContainerClassName="map-container"
           className="w-[180%] h-[80vh]"
