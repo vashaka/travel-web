@@ -10,7 +10,7 @@ import { Link } from "react-scroll";
 const MainPage = () => {
   return (
     <div>
-      <ImageSlider slides={SliderData} />
+      <ImageSlider slides={SliderData} name='slider'/>
       <GeoMap />
 
       <div className="max-w-[1240px] m-auto py-16 px-4 text-center z-10">

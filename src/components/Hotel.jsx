@@ -27,6 +27,7 @@ const Hotel = ({
         border: "3px solid rgb(255, 255, 255)",
         boxShadow: "rgb(19 15 235 / 15%) 1px 2px 20px",
       }}
+      id='hotels'
     >
       <p className="">{HotelTitle}</p>
       <div className="flex justify-center">

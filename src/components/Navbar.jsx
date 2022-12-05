@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [scrollTop, setScrollTop] = useState(0);
@@ -43,46 +43,34 @@ const Navbar = () => {
 
         <ul className="flex items-center sticky">
           <li className="cursor-pointer	hover:scale-110 ease-in duration-300">
-            <NavLink activeClassName="activeGeorgia" exact={true} to="/">
+            <Link to="slider" smooth={true} duration={300}>
               HOME
-            </NavLink>
+            </Link>
           </li>
           <li className="cursor-pointer	hover:scale-110 ease-in duration-300">
-            <NavLink activeClassName="activeGeorgia" exact={true} to="/georgia">
+            <Link to="Map" smooth={true} duration={300}>
               GEORGIA
-            </NavLink>
+            </Link>
           </li>
           <li className="cursor-pointer	hover:scale-110 ease-in duration-300">
-            <NavLink
-              activeClassName="activeNavbarButton"
-              exact={true}
-              to="/trips"
-            >
+            <Link to="slider" smooth={true} duration={300}>
               TRIPS
-            </NavLink>
+            </Link>
           </li>
           <li className="cursor-pointer	hover:scale-110 ease-in duration-300">
-            <NavLink
-              activeClassName="activeNavbarButton"
-              exact={true}
-              to="/hotels"
-            >
+            <Link to="hotels" smooth={true} duration={300}>
               HOTELS
-            </NavLink>
+            </Link>
           </li>
           <li className="cursor-pointer	hover:scale-110 ease-in duration-300">
-            <NavLink
-              activeClassName="activeNavbarButton"
-              exact={true}
-              to="/cars"
-            >
+            <Link to="slider" smooth={true} duration={300}>
               CARS
-            </NavLink>
+            </Link>
           </li>
           <button className="cart-btn ml-2">
-            <NavLink activeClassName="cart-btnActive" exact={true} to="/match">
+            <Link to="slider" smooth={true} duration={300}>
               MATCH
-            </NavLink>
+            </Link>
           </button>
         </ul>
 
