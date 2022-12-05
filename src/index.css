@@ -32,6 +32,12 @@
   cursor: pointer;
   padding: 5px;
 }
+
+.googleMap {
+  margin: auto;
+  width: 60%;
+}
+
 .activeGeorgia {
   width: 10em;
   height: 5ex;

@@ -6,6 +6,7 @@ import { WyndhamBatumiImages } from "../data/HotelImages";
 import Plan from "../components/Plan";
 import GeoMap from "../components/GeoMap";
 import { Link } from "react-scroll";
+import MapComponent from "../components/MapComponent";
 
 const MainPage = () => {
   return (
@@ -42,6 +43,10 @@ const MainPage = () => {
           </div>
         </div>
       </div>
+
+      
+      <MapComponent />
+      
 
       <div className="max-w-[1240px] m-auto py-16 px-4 text-center">
         <h1 className="text-3xl text-[#f51767]">Choose Your Hotel</h1>
@@ -92,6 +97,8 @@ const MainPage = () => {
       {/* <div className="w-[400px]">
         <Hotel />
       </div> */}
+
+
     </div>
   );
 };

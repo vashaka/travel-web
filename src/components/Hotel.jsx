@@ -2,9 +2,14 @@ import React from "react";
 
 import { RiStarSFill } from "react-icons/ri";
 
+import { useDispatch, useSelector } from "react-redux";
+import { AppActions } from "../redux";
+
+
 const styles = {
   img: "h-full rounded-lg hover:scale-110",
 };
+
 
 const Hotel = ({
   HotelTitle,
@@ -17,7 +22,9 @@ const Hotel = ({
   checkForMediumScreen,
 }) => {
   const [selectedimg, setSelectedImg] = React.useState(HotelSelectedImage);
-
+  
+  const dispatch = useDispatch();
+  
   const starsOfHotel = Number(stars);
   return (
     <div
@@ -28,6 +35,7 @@ const Hotel = ({
         boxShadow: "rgb(19 15 235 / 15%) 1px 2px 20px",
       }}
       id='hotels'
+      onClick={() => dispatch(AppActions.setCoordinates({x:'43.2134432',y:'42.4532521'}))}
     >
       <p className="">{HotelTitle}</p>
       <div className="flex justify-center">
