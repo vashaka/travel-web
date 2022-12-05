@@ -44,13 +44,7 @@ const MainPage = () => {
         </div>
       </div>
 
-      <MapComponent
-        isMarkerShown
-        googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
-        loadingElement={<div style={{ height: `100%` }} />}
-        containerElement={<div style={{ height: `400px` }} />}
-        mapElement={<div style={{ height: `100%` }} />}
-      />
+      <MapComponent />
 
       <div className="max-w-[1240px] m-auto py-16 px-4 text-center">
         <h1 className="text-3xl text-[#f51767]">Choose Your Hotel</h1>
