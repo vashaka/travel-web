@@ -11,7 +11,7 @@ import MapComponent from "../components/MapComponent";
 const MainPage = () => {
   return (
     <div>
-      <ImageSlider slides={SliderData} name='slider'/>
+      <ImageSlider slides={SliderData} name="slider" />
       <GeoMap />
 
       <div className="max-w-[1240px] m-auto py-16 px-4 text-center z-10">
@@ -44,9 +44,13 @@ const MainPage = () => {
         </div>
       </div>
 
-      
-      <MapComponent />
-      
+      <MapComponent
+        isMarkerShown
+        googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+        loadingElement={<div style={{ height: `100%` }} />}
+        containerElement={<div style={{ height: `400px` }} />}
+        mapElement={<div style={{ height: `100%` }} />}
+      />
 
       <div className="max-w-[1240px] m-auto py-16 px-4 text-center">
         <h1 className="text-3xl text-[#f51767]">Choose Your Hotel</h1>
@@ -97,8 +101,6 @@ const MainPage = () => {
       {/* <div className="w-[400px]">
         <Hotel />
       </div> */}
-
-
     </div>
   );
 };
