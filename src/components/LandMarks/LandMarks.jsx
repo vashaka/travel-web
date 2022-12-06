@@ -1,25 +1,24 @@
 import React from "react";
 
 import { RiStarSFill } from "react-icons/ri";
-
-import { useDispatch, useSelector } from "react-redux";
-import { AppActions } from "../redux";
+import { useDispatch } from "react-redux";
+import { AppActions } from "../../redux";
 
 const styles = {
   img: "h-full rounded-lg hover:scale-110",
 };
 
-const Hotel = ({
-  HotelTitle,
-  HotelSelectedImage,
+const Landmarks = ({
+  LandMarkTitle,
   stars,
-  HotelImages,
-  priceOnOneDay,
+  LandMarkSelectedImage,
+  LandMarkImages,
+  PriceToGetThere,
   reviews,
   rating,
   checkForMediumScreen,
 }) => {
-  const [selectedimg, setSelectedImg] = React.useState(HotelSelectedImage);
+  const [selectedimg, setSelectedImg] = React.useState(LandMarkSelectedImage);
 
   const dispatch = useDispatch();
 
@@ -33,7 +32,6 @@ const Hotel = ({
           border: "3px solid rgb(255, 255, 255)",
           boxShadow: "rgb(19 15 235 / 15%) 1px 2px 20px",
         }}
-        id="hotels"
         onClick={() =>
           dispatch(
             AppActions.setCoordinates({
@@ -44,7 +42,7 @@ const Hotel = ({
           )
         }
       >
-        <p className="">{HotelTitle}</p>
+        <p className="">{LandMarkTitle}</p>
         <div className="flex justify-center">
           {starsOfHotel === 2 && (
             <>
@@ -89,7 +87,7 @@ const Hotel = ({
 
         {checkForMediumScreen && (
           <div className="grid grid-flow-col gap-0 mt-1 md:px-40 lg:px-0">
-            {HotelImages?.map((HotelImage) => (
+            {LandMarkImages?.map((HotelImage) => (
               <img
                 key={HotelImage.image}
                 src={HotelImage.image}
@@ -103,7 +101,7 @@ const Hotel = ({
         )}
         {!checkForMediumScreen && (
           <div className="grid grid-flow-col gap-0 mt-1">
-            {HotelImages?.map((HotelImage) => (
+            {LandMarkImages?.map((HotelImage) => (
               <img
                 key={HotelImage}
                 src={HotelImage}
@@ -116,10 +114,10 @@ const Hotel = ({
           </div>
         )}
         <div className="flex justify-start mt-[3px] mx-4 md:mx-1">
-          <p className="text-sm text-gray-400">1 night, 2 adults</p>
+          <p className="text-sm text-gray-400">Trip Costs</p>
         </div>
         <div className="flex justify-start -mt-1 mx-4 md:mx-1">
-          <p className="font-medium">USD {priceOnOneDay}</p>
+          <p className="font-medium">USD {PriceToGetThere}</p>
         </div>
         <div className="flex justify-end -mt-[2.7rem] mx-4 md:mx-1">
           <div className="">
@@ -141,4 +139,4 @@ const Hotel = ({
   );
 };
 
-export default Hotel;
+export default Landmarks;

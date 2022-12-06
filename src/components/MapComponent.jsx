@@ -17,6 +17,12 @@ const MapComponent = () => {
 
   return (
     <>
+      <div className="flex justify-center">
+        <h1 className="mb-2">
+          Selected Destination
+          <span className="text-white bg-red-300 px-2 py-1">Batumi</span>
+        </h1>
+      </div>
       <div className="hidden lg:flex justify-center">
         <GoogleMap
           zoom={coordinates.zoomLevel}
@@ -31,7 +37,7 @@ const MapComponent = () => {
       {/* for small screens */}
       <div className="flex lg:hidden justify-center">
         <GoogleMap
-          zoom={7}
+          zoom={coordinates.zoomLevel}
           center={{ lat: coordinates.x, lng: coordinates.y }}
           mapContainerClassName="map-container-for-small-screens"
           className="w-[180%] h-[80vh]"

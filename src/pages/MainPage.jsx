@@ -4,8 +4,8 @@ import { SliderData } from "../data/SliderData";
 import GeoMap from "../components/GeoMap";
 import MapComponent from "../components/MapComponent";
 import PlanContainer from "../components/PlanContainer";
-import HotelContainer from "../components/HotelContainer";
-import DestinationsContainer from "../components/DestinationsContainer";
+import HotelContainer from "../components/Hotels/HotelContainer";
+import LandMarkContainer from "../components/LandMarks/LandMarksContainer";
 
 const MainPage = () => {
   return (
@@ -14,7 +14,7 @@ const MainPage = () => {
       <GeoMap />
       <PlanContainer />
       <MapComponent />
-      <DestinationsContainer />
+      <LandMarkContainer />
       <HotelContainer />
     </div>
   );

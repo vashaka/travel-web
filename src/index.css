@@ -12,7 +12,7 @@
   }
 
   h1 {
-    @apply text-xl md:text-4xl font-bold;
+    @apply text-xl md:text-2xl font-bold;
   }
 
   li {
@@ -36,6 +36,11 @@
 .googleMap {
   margin: auto;
   width: 60%;
+}
+.LandMarksContainer {
+  position: relative;
+  height: 400px;
+  overflow: scroll;
 }
 
 .activeGeorgia {
@@ -130,6 +135,9 @@
   width: 80%;
   height: 70vh;
   border-radius: 20px;
+
+  /* width: 100%;
+  height: 50vh; */
 }
 
 .map-container-for-small-screens {

@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AppActions } from "../redux";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 
 const Plan = ({ PlanTitle, amountOfLandmarks }) => {
   const dispatch = useDispatch();
