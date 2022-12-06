@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 const MapComponent = () => {
   const coordinates = useSelector((state) => state.coordinates);
-  const qutaisi = useSelector((state) => state.qutaisi);
+  const qutaisi = useSelector((state) => state.qutaisi); // Testing
 
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: "AIzaSyCzTm9ZhDTvk1dTqrtD1F2YYcWk9WbHQ7o",
@@ -13,6 +13,8 @@ const MapComponent = () => {
 
   console.log(coordinates.x);
 
+  // we can use marker if we want it on map
+
   return (
     <>
       <div className="hidden lg:flex justify-center">
@@ -21,7 +23,9 @@ const MapComponent = () => {
           center={{ lat: coordinates.x, lng: coordinates.y }}
           mapContainerClassName="map-container"
           className="w-[180%] h-[80vh]"
-        ></GoogleMap>
+        >
+          {/* <Marker position={{ lat: coordinates.x, lng: coordinates.y }} /> */}
+        </GoogleMap>
       </div>
 
       {/* for small screens */}
@@ -31,7 +35,9 @@ const MapComponent = () => {
           center={{ lat: coordinates.x, lng: coordinates.y }}
           mapContainerClassName="map-container-for-small-screens"
           className="w-[180%] h-[80vh]"
-        ></GoogleMap>
+        >
+          {/* <Marker position={{ lat: coordinates.x, lng: coordinates.y }} /> */}
+        </GoogleMap>
       </div>
     </>
   );

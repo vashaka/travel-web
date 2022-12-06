@@ -129,6 +129,7 @@
 .map-container {
   width: 80%;
   height: 70vh;
+  border-radius: 20px;
 }
 
 .map-container-for-small-screens {

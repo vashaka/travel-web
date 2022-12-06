@@ -43,32 +43,32 @@ const Navbar = () => {
 
         <ul className="flex items-center sticky">
           <li className="cursor-pointer	hover:scale-110 ease-in duration-300">
-            <Link to="slider" smooth={true} duration={300}>
+            <Link to="slider" smooth={true} duration={400}>
               HOME
             </Link>
           </li>
           <li className="cursor-pointer	hover:scale-110 ease-in duration-300">
-            <Link to="Map" smooth={true} duration={300}>
+            <Link to="Map" smooth={true} duration={400}>
               GEORGIA
             </Link>
           </li>
           <li className="cursor-pointer	hover:scale-110 ease-in duration-300">
-            <Link to="slider" smooth={true} duration={300}>
+            <Link to="slider" smooth={true} duration={400}>
               TRIPS
             </Link>
           </li>
           <li className="cursor-pointer	hover:scale-110 ease-in duration-300">
-            <Link to="hotels" smooth={true} duration={300}>
+            <Link to="hotels" smooth={true} duration={400}>
               HOTELS
             </Link>
           </li>
           <li className="cursor-pointer	hover:scale-110 ease-in duration-300">
-            <Link to="slider" smooth={true} duration={300}>
+            <Link to="slider" smooth={true} duration={400}>
               CARS
             </Link>
           </li>
           <button className="cart-btn ml-2">
-            <Link to="slider" smooth={true} duration={300}>
+            <Link to="slider" smooth={true} duration={400}>
               MATCH
             </Link>
           </button>

@@ -5,7 +5,7 @@ import { Route, Switch } from "react-router-dom";
 const App = () => {
   return (
     <Fragment>
-          <MainPage />;
+      <MainPage />;
     </Fragment>
   );
 };
