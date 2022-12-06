@@ -1,5 +1,6 @@
 export const Landmarks = [
   {
+    id: 1,
     name: "Mestia , Svaneti",
     side: "West Georgia ",
     LandMarkSelectedImage:
@@ -20,6 +21,7 @@ export const Landmarks = [
     rating: "3.2",
   },
   {
+    id: 2,
     name: "Ushguli",
     side: "West Georgia",
     LandMarkSelectedImage:
@@ -40,6 +42,7 @@ export const Landmarks = [
     rating: "3.2",
   },
   {
+    id: 3,
     name: "Batumi",
     side: "West Georgia",
     LandMarkSelectedImage:
@@ -60,6 +63,7 @@ export const Landmarks = [
     rating: "3.2",
   },
   {
+    id: 4,
     name: "Kazgebi",
     side: "East Georgia",
     LandMarkSelectedImage:
@@ -80,6 +84,7 @@ export const Landmarks = [
     rating: "3.2",
   },
   {
+    id: 5,
     name: "Kakheti",
     side: "East Georgia",
     LandMarkSelectedImage:
@@ -100,6 +105,7 @@ export const Landmarks = [
     rating: "3.2",
   },
   {
+    id: 6,
     name: "Ananuri",
     side: "East Georgia",
     LandMarkSelectedImage:
@@ -120,6 +126,8 @@ export const Landmarks = [
     rating: "3.2",
   },
   {
+    id: 7,
+
     name: "Uflistsikhe",
     side: "East Georgia",
     LandMarkSelectedImage:
@@ -140,6 +148,8 @@ export const Landmarks = [
     rating: "3.2",
   },
   {
+    id: 8,
+
     name: "Tusheti",
     side: "East Georgia",
     LandMarkSelectedImage:
@@ -160,7 +170,8 @@ export const Landmarks = [
     rating: "3.2",
   },
   {
-    name: "Mestia , Svaneti",
+    id: 9,
+    name: "Mestia, Svaneti",
     side: "West Georgia ",
     LandMarkSelectedImage:
       "https://i.ytimg.com/vi/t198p47m_nU/maxresdefault.jpg",
@@ -180,6 +191,7 @@ export const Landmarks = [
     rating: "3.2",
   },
   {
+    id: 10,
     name: "Ushguli",
     side: "West Georgia",
     LandMarkSelectedImage:
@@ -200,6 +212,7 @@ export const Landmarks = [
     rating: "3.2",
   },
   {
+    id: 11,
     name: "Batumi",
     side: "West Georgia",
     LandMarkSelectedImage:
@@ -220,6 +233,7 @@ export const Landmarks = [
     rating: "3.2",
   },
   {
+    id: 12,
     name: "Kazgebi",
     side: "East Georgia",
     LandMarkSelectedImage:
@@ -240,6 +254,7 @@ export const Landmarks = [
     rating: "3.2",
   },
   {
+    id: 13,
     name: "Kakheti",
     side: "East Georgia",
     LandMarkSelectedImage:
@@ -260,6 +275,7 @@ export const Landmarks = [
     rating: "3.2",
   },
   {
+    id: 14,
     name: "Ananuri",
     side: "East Georgia",
     LandMarkSelectedImage:
@@ -280,6 +296,7 @@ export const Landmarks = [
     rating: "3.2",
   },
   {
+    id: 15,
     name: "Uflistsikhe",
     side: "East Georgia",
     LandMarkSelectedImage:
@@ -300,6 +317,7 @@ export const Landmarks = [
     rating: "3.2",
   },
   {
+    id: 16,
     name: "Tusheti",
     side: "East Georgia",
     LandMarkSelectedImage:

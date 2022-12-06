@@ -18,9 +18,14 @@ const MapComponent = () => {
   return (
     <>
       <div className="flex justify-center">
+        <h1 className="absolute -bottom-[700px] opacity-0" name="Google-Maps">
+          forSmoothScroll
+        </h1>
+      </div>
+      <div className="flex justify-center">
         <h1 className="mb-2">
           Selected Destination
-          <span className="text-white bg-red-300 px-2 py-1">Batumi</span>
+          <span className="text-white bg-[#f51767] px-2 py-1">Batumi</span>
         </h1>
       </div>
       <div className="hidden lg:flex justify-center">
