@@ -1,6 +1,6 @@
 import React from 'react'
 import Hotel from './Hotel'
-import { Hotels } from '../data/Hotels'
+import { Hotels } from '../../data/Hotels'
 
 const HotelContainer = () => {
   return (
