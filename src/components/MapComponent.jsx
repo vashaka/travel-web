@@ -35,7 +35,7 @@ const MapComponent = () => {
           mapContainerClassName="map-container"
           className="w-[180%] h-[80vh]"
         >
-          {/* <Marker position={{ lat: coordinates.x, lng: coordinates.y }} /> */}
+          <Marker position={{ lat: coordinates.x, lng: coordinates.y }} /> 
         </GoogleMap>
       </div>
 
@@ -47,7 +47,7 @@ const MapComponent = () => {
           mapContainerClassName="map-container-for-small-screens"
           className="w-[180%] h-[80vh]"
         >
-          {/* <Marker position={{ lat: coordinates.x, lng: coordinates.y }} /> */}
+          <Marker position={{ lat: coordinates.x, lng: coordinates.y }} /> 
         </GoogleMap>
       </div>
     </>
