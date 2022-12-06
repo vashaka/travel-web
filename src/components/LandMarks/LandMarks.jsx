@@ -28,10 +28,12 @@ const Landmarks = ({
   return (
     <>
       <Link to="Google-Maps" duration={400} smooth={true}>
-        <div
-          className="w-full col-span-2 md:col-span-1 row-span-1 xl:col-span-1 relative"
-          name="Landmarks"
-        >
+        <div className="flex justify-center">
+          <h1 className="absolute bottom-[700px]" name="Landmarks">
+            textForSmoothScroll
+          </h1>
+        </div>
+        <div className="w-full col-span-2 md:col-span-1 row-span-1 xl:col-span-1 relative">
           <div
             className="md:hover:scale-105 ease-in duration-300 w-full h-[375px] object-cover"
             style={{
