@@ -13,7 +13,9 @@ const PlanContainer = () => {
 
         <Plan PlanTitle="Premium" amountOfLandmarks="5" />
 
-        <Plan PlanTitle="VIP" amountOfLandmarks="7" />
+        <div className="w-full col-span-2 md:col-span-2 lg:col-span-1 row-span-1 relative">
+          <Plan PlanTitle="VIP" amountOfLandmarks="7" />
+        </div>
       </div>
     </div>
   );
