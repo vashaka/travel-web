@@ -4,6 +4,7 @@ import { RiStarSFill } from "react-icons/ri";
 import { useDispatch } from "react-redux";
 import { AppActions } from "../../redux";
 import { Link } from "react-scroll";
+import { LandmarksArray } from "../../data/LandMarks";
 
 const styles = {
   img: "h-full rounded-lg hover:scale-110",
@@ -11,6 +12,7 @@ const styles = {
 
 const Landmarks = ({
   LandMarkTitle,
+  id,
   stars,
   LandMarkSelectedImage,
   LandMarkImages,
@@ -25,6 +27,32 @@ const Landmarks = ({
   const dispatch = useDispatch();
 
   const starsOfHotel = Number(stars);
+
+  const recieveCoordinates = (id) => {
+    let place = LandmarksArray.find((item) => {
+      return item.id === id;
+    });
+
+    let CoordinateX = place.coordinates.x;
+    let CoordinateY = place.coordinates.y;
+
+    dispatch(
+      AppActions.setCoordinates({
+        zoomLevel: 7,
+      })
+    );
+
+    setTimeout(() => {
+      dispatch(
+        AppActions.setCoordinates({
+          x: CoordinateX,
+          y: CoordinateY,
+          zoomLevel: 10,
+        })
+      );
+    }, 1000);
+  };
+
   return (
     <>
       <Link to="Google-Maps" duration={400} smooth={true}>
@@ -33,7 +61,11 @@ const Landmarks = ({
             textForSmoothScroll
           </h1>
         </div>
-        <div className="w-full col-span-2 md:col-span-1 row-span-1 xl:col-span-1 relative">
+        {/* <div className="w-full col-span-2 md:col-span-1 row-span-1 xl:col-span-1 relative"> */}
+        <div
+          className="w-full col-span-2 md:col-span-1 row-span-1 xl:col-span-1 relative"
+          name="Landmarks"
+        >
           <div
             className="md:hover:scale-105 ease-in duration-300 w-full h-[375px] object-cover"
             style={{
@@ -41,15 +73,7 @@ const Landmarks = ({
               border: "3px solid rgb(255, 255, 255)",
               boxShadow: "rgb(19 15 235 / 15%) 1px 2px 20px",
             }}
-            onClick={() =>
-              dispatch(
-                AppActions.setCoordinates({
-                  x: 42.2488567,
-                  y: 42.69421460000001,
-                  zoomLevel: 10,
-                })
-              )
-            }
+            onClick={() => recieveCoordinates(id)}
           >
             <p className="">{LandMarkTitle}</p>
             <div className="flex justify-center">
