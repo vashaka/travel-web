@@ -101,12 +101,12 @@ const Hotel = ({
           <div className="grid grid-flow-col gap-0 mt-1">
             {HotelImages?.map((HotelImage) => (
               <img
-                key={HotelImage.image}
-                src={HotelImage.image}
+                key={HotelImage}
+                src={HotelImage}
                 width={70}
                 alt=""
                 className={styles.img}
-                onMouseEnter={() => setSelectedImg(HotelImage.image)}
+                onMouseEnter={() => setSelectedImg(HotelImage)}
               />
             ))}
           </div>
