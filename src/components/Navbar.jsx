@@ -37,24 +37,26 @@ const Navbar = () => {
       <div className="flex items-center justify-between h-16 px-4 bg-white">
         <div>
           <h1 className="cursor-pointer	hover:scale-110 ease-in duration-300 text-[#f51767]">
-            <Link to="/">BREATHE.</Link>
+            <Link to="slider" smooth={true} duration={400}>
+              BREATHE.
+            </Link>
           </h1>
         </div>
 
         <ul className="flex items-center sticky">
-          <li className="cursor-pointer	hover:scale-110 ease-in duration-300">
+          {/* <li className="cursor-pointer	hover:scale-110 ease-in duration-300">
             <Link to="slider" smooth={true} duration={400}>
               HOME
             </Link>
-          </li>
+          </li> */}
           <li className="cursor-pointer	hover:scale-110 ease-in duration-300">
             <Link to="Map" smooth={true} duration={400}>
               GEORGIA
             </Link>
           </li>
           <li className="cursor-pointer	hover:scale-110 ease-in duration-300">
-            <Link to="slider" smooth={true} duration={400}>
-              TRIPS
+            <Link to="Landmarks" smooth={true} duration={400}>
+              LANDMARKS
             </Link>
           </li>
           <li className="cursor-pointer	hover:scale-110 ease-in duration-300">
