@@ -16,6 +16,7 @@ const AppSlice = createSlice({
     },
     setCoordinates(state, action) {
       state.coordinates = action.payload;
+      console.log(action.payload);
     },
   },
 });
