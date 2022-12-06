@@ -39,11 +39,21 @@ const Landmarks = ({
      
     dispatch(
       AppActions.setCoordinates({
+        zoomLevel: 7,
+      })
+    )
+
+    setTimeout(() => {
+       dispatch(
+      AppActions.setCoordinates({
         x: CoordinateX,
         y: CoordinateY,
         zoomLevel: 10,
       })
     )
+    }, 1000);
+
+   
   }
   
 
