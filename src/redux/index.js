@@ -5,6 +5,8 @@ const initialState = {
   ActivePlan: "VIP",
   coordinates: { x: 42.2756944, y: 43.7540462, zoomLevel: 8 },
   qutaisi: { x: 42.2488567, y: 42.69421460000001, zoomLevel: 10 },
+  // cart
+  cart: [],
 };
 
 const AppSlice = createSlice({
@@ -16,7 +18,16 @@ const AppSlice = createSlice({
     },
     setCoordinates(state, action) {
       state.coordinates = action.payload;
-      console.log(action.payload);
+    },
+    // We should Move this to different Redux
+    addItem(state, action) {
+      state.cart = [...state.cart, action.payload];
+    },
+    removeItem(state, action) {
+      const newCart = state.cart.filter(
+        (item) => item.id !== action.payload.id
+      );
+      state.cart = newCart;
     },
   },
 });

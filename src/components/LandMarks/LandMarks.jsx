@@ -53,6 +53,40 @@ const Landmarks = ({
     }, 1000);
   };
 
+  const addToCartHandler = () => {
+    setIsAddedInCart(!isAddedInCart);
+    dispatch(
+      AppActions.addItem({
+        LandMarkTitle,
+        id,
+        stars,
+        LandMarkSelectedImage,
+        LandMarkImages,
+        PriceToGetThere,
+        reviews,
+        rating,
+        checkForMediumScreen,
+      })
+    );
+  };
+
+  const removeFromCartHandler = () => {
+    setIsAddedInCart(!isAddedInCart);
+    dispatch(
+      AppActions.removeItem({
+        LandMarkTitle,
+        id,
+        stars,
+        LandMarkSelectedImage,
+        LandMarkImages,
+        PriceToGetThere,
+        reviews,
+        rating,
+        checkForMediumScreen,
+      })
+    );
+  };
+
   return (
     <>
       <Link to="Google-Maps" duration={400} smooth={true}>
@@ -171,7 +205,7 @@ const Landmarks = ({
               {isAddedInCart ? (
                 <Link to="">
                   <button
-                    onClick={() => setIsAddedInCart(!isAddedInCart)}
+                    onClick={addToCartHandler}
                     className="landmark-cart-btn hover:bg-[#f51767] hover:text-white"
                   >
                     <p>add to cart</p>
@@ -180,7 +214,7 @@ const Landmarks = ({
               ) : (
                 <Link to="">
                   <button
-                    onClick={() => setIsAddedInCart(!isAddedInCart)}
+                    onClick={removeFromCartHandler}
                     className="landmark-cart-btn-added hover:cursor-pointer"
                   >
                     <p>added</p>
