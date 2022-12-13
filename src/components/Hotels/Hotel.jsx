@@ -18,11 +18,13 @@ const Hotel = ({
   reviews,
   rating,
   checkForMediumScreen,
+  id,
 }) => {
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const [selectedimg, setSelectedImg] = React.useState(HotelSelectedImage);
-  const [isAddedInCart, setIsAddedInCart] = React.useState(true);
+  const isAdded = useSelector((state) => state.isAdded);
+  const [isAddedInCart, setIsAddedInCart] = React.useState(false);
   const starsOfHotel = Number(stars);
 
   const addToCartHandler = () => {
@@ -37,6 +39,7 @@ const Hotel = ({
         reviews,
         rating,
         checkForMediumScreen,
+        id,
       })
     );
   };
@@ -52,6 +55,7 @@ const Hotel = ({
         reviews,
         rating,
         checkForMediumScreen,
+        id,
       })
     );
   };
@@ -159,7 +163,7 @@ const Hotel = ({
           </div>
         </div>
         <div className="flex justify-center">
-          {!isAddedInCart ? (
+          {isAddedInCart ? (
             <button
               onClick={removeFromCartHandler}
               className="landmark-cart-btn-added hover:cursor-pointer"

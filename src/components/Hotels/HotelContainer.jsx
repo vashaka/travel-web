@@ -20,7 +20,8 @@ const HotelContainer = () => {
             priceOnOneDay={item.priceOnOneDay}
             reviews={item.reviews}
             rating={item.rating}
-            key={item.HotelTitle}
+            key={item.id}
+            id={item.id}
           />
         ))}
       </div>

@@ -23,7 +23,6 @@ const AppSlice = createSlice({
     // We should Move this to different Redux
     addItem(state, action) {
       state.cart = [...state.cart, action.payload];
-      console.log(state.cart);
       state.itemsInCart += 1;
     },
     removeItem(state, action) {
@@ -31,7 +30,6 @@ const AppSlice = createSlice({
         (item) => item.id !== action.payload.id
       );
       state.cart = newCart;
-      console.log(state.cart);
       state.itemsInCart -= 1;
     },
   },
