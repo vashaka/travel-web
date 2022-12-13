@@ -25,7 +25,6 @@ const AppSlice = createSlice({
     addItem(state, action) {
       state.cart = [...state.cart, action.payload];
       state.itemsInCart += 1;
-      console.log(state.cart);
     },
     removeItem(state, action) {
       const newCart = state.cart.filter(
@@ -33,7 +32,13 @@ const AppSlice = createSlice({
       );
       state.cart = newCart;
       state.itemsInCart -= 1;
-      console.log(state.cart);
+    },
+    activateBumpAnimation(state) {
+      state.bumpAnimation = true;
+    },
+
+    deActivateBumpAnimation(state) {
+      state.bumpAnimation = false;
     },
   },
 });

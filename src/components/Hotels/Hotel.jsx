@@ -26,6 +26,10 @@ const Hotel = ({
   const starsOfHotel = Number(stars);
 
   const addToCartHandler = () => {
+    dispatch(AppActions.activateBumpAnimation());
+    setTimeout(() => {
+      dispatch(AppActions.deActivateBumpAnimation());
+    }, 500);
     dispatch(
       AppActions.addItem({
         title,

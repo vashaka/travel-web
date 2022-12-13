@@ -55,6 +55,10 @@ const Landmarks = ({
   };
 
   const addToCartHandler = () => {
+    dispatch(AppActions.activateBumpAnimation());
+    setTimeout(() => {
+      dispatch(AppActions.deActivateBumpAnimation());
+    }, 500);
     dispatch(
       AppActions.addItem({
         title,
