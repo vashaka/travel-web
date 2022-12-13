@@ -8,7 +8,7 @@ const Cart = () => {
   const cart = useSelector((state) => state.cart);
 
   return (
-    <div>
+    <div name="cart">
       {cart.map((item) => (
         <div key={item.id}>
           {console.log(item)}

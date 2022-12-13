@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [scrollTop, setScrollTop] = useState(0);
+  const bumpAnimation = useSelector((state) => state.bumpAnimation);
+  const itemsInCart = useSelector((state) => state.itemsInCart);
 
   const onScroll = () => {
     const winScroll = document.documentElement.scrollTop;
@@ -90,7 +93,7 @@ const Navbar = () => {
                   </svg>
                 </span>
                 <span>Cart</span>
-                {/* <span className="badge">{itemsInCart}</span> */}
+                <span className="badge">{itemsInCart}</span>
               </button>
             ) : (
               <button
@@ -107,7 +110,7 @@ const Navbar = () => {
                   </svg>
                 </span>
                 <span>Cart</span>
-                {/* <span className="badge">{itemsInCart}</span> */}
+                <span className="badge">{itemsInCart}</span>
               </button>
             )}
           </Link>

@@ -6,6 +6,7 @@ const initialState = {
   coordinates: { x: 42.2756944, y: 43.7540462, zoomLevel: 8 },
   qutaisi: { x: 42.2488567, y: 42.69421460000001, zoomLevel: 10 },
   // cart
+  bumpAnimation: false,
   cart: [],
   itemsInCart: 0,
 };
