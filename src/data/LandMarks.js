@@ -16,7 +16,7 @@ export const LandmarksArray = [
       "https://static.wixstatic.com/media/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg/v1/fill/w_2000,h_1339,al_c/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg",
       "https://colorup.ge/wp-content/uploads/2019/02/%E1%83%9B%E1%83%94%E1%83%A1%E1%83%A2%E1%83%98%E1%83%90-2.jpg",
     ],
-    PriceToGetThere: "100",
+    PriceToGetThere: 100,
     reviews: "2.123",
     rating: "3.2",
     coordinates: {
@@ -41,7 +41,7 @@ export const LandmarksArray = [
       "https://static.wixstatic.com/media/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg/v1/fill/w_2000,h_1339,al_c/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg",
       "https://colorup.ge/wp-content/uploads/2019/02/%E1%83%9B%E1%83%94%E1%83%A1%E1%83%A2%E1%83%98%E1%83%90-2.jpg",
     ],
-    PriceToGetThere: "100",
+    PriceToGetThere: 100,
     reviews: "2.123",
     rating: "3.2",
     coordinates: {
@@ -66,7 +66,7 @@ export const LandmarksArray = [
       "https://static.wixstatic.com/media/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg/v1/fill/w_2000,h_1339,al_c/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg",
       "https://colorup.ge/wp-content/uploads/2019/02/%E1%83%9B%E1%83%94%E1%83%A1%E1%83%A2%E1%83%98%E1%83%90-2.jpg",
     ],
-    PriceToGetThere: "100",
+    PriceToGetThere: 100,
     reviews: "2.123",
     rating: "3.2",
     coordinates: {
@@ -91,7 +91,7 @@ export const LandmarksArray = [
       "https://static.wixstatic.com/media/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg/v1/fill/w_2000,h_1339,al_c/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg",
       "https://colorup.ge/wp-content/uploads/2019/02/%E1%83%9B%E1%83%94%E1%83%A1%E1%83%A2%E1%83%98%E1%83%90-2.jpg",
     ],
-    PriceToGetThere: "100",
+    PriceToGetThere: 100,
     reviews: "2.123",
     rating: "3.2",
     coordinates: {
@@ -116,7 +116,7 @@ export const LandmarksArray = [
       "https://static.wixstatic.com/media/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg/v1/fill/w_2000,h_1339,al_c/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg",
       "https://colorup.ge/wp-content/uploads/2019/02/%E1%83%9B%E1%83%94%E1%83%A1%E1%83%A2%E1%83%98%E1%83%90-2.jpg",
     ],
-    PriceToGetThere: "100",
+    PriceToGetThere: 100,
     reviews: "2.123",
     rating: "3.2",
     coordinates: {
@@ -141,7 +141,7 @@ export const LandmarksArray = [
       "https://static.wixstatic.com/media/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg/v1/fill/w_2000,h_1339,al_c/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg",
       "https://colorup.ge/wp-content/uploads/2019/02/%E1%83%9B%E1%83%94%E1%83%A1%E1%83%A2%E1%83%98%E1%83%90-2.jpg",
     ],
-    PriceToGetThere: "100",
+    PriceToGetThere: 100,
     reviews: "2.123",
     rating: "3.2",
     coordinates: {
@@ -167,7 +167,7 @@ export const LandmarksArray = [
       "https://static.wixstatic.com/media/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg/v1/fill/w_2000,h_1339,al_c/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg",
       "https://colorup.ge/wp-content/uploads/2019/02/%E1%83%9B%E1%83%94%E1%83%A1%E1%83%A2%E1%83%98%E1%83%90-2.jpg",
     ],
-    PriceToGetThere: "100",
+    PriceToGetThere: 100,
     reviews: "2.123",
     rating: "3.2",
     coordinates: {
@@ -193,7 +193,7 @@ export const LandmarksArray = [
       "https://static.wixstatic.com/media/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg/v1/fill/w_2000,h_1339,al_c/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg",
       "https://colorup.ge/wp-content/uploads/2019/02/%E1%83%9B%E1%83%94%E1%83%A1%E1%83%A2%E1%83%98%E1%83%90-2.jpg",
     ],
-    PriceToGetThere: "100",
+    PriceToGetThere: 100,
     reviews: "2.123",
     rating: "3.2",
     coordinates: {

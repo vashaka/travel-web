@@ -9,6 +9,7 @@ const initialState = {
   bumpAnimation: false,
   cart: [],
   itemsInCart: 0,
+  totalPrice: 0,
 };
 
 const AppSlice = createSlice({
@@ -25,6 +26,7 @@ const AppSlice = createSlice({
     addItem(state, action) {
       state.cart = [...state.cart, action.payload];
       state.itemsInCart += 1;
+      state.totalPrice = state.totalPrice + action.payload.price;
     },
     removeItem(state, action) {
       const newCart = state.cart.filter(
@@ -32,6 +34,7 @@ const AppSlice = createSlice({
       );
       state.cart = newCart;
       state.itemsInCart -= 1;
+      state.totalPrice = state.totalPrice - action.payload.price;
     },
     activateBumpAnimation(state) {
       state.bumpAnimation = true;

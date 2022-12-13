@@ -5,7 +5,7 @@ export const Hotels = [
     stars: "5",
     HotelSelectedImage:
       "https://t-cf.bstatic.com/xdata/images/hotel/max1280x900/391436436.jpg?k=5cc7b048a73c5a270d2ad144ccf7b22d9bbb7d82ee12360a6761beffdac0d27f&o=&hp=1",
-    priceOnOneDay: "170",
+    priceOnOneDay: 170,
     reviews: "1.322",
     rating: "4.5",
     images: [
@@ -25,7 +25,7 @@ export const Hotels = [
     stars: "4",
     HotelSelectedImage:
       "https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/292611194.jpg?k=e2164587614309533dc4aa776a4f90688aa682fdfc90da5d8a12f3a8ab3bb15a&o=&hp=1",
-    priceOnOneDay: "110",
+    priceOnOneDay: 110,
     reviews: "3.22",
     rating: "3.5",
     images: [
@@ -45,7 +45,7 @@ export const Hotels = [
     stars: "2",
     HotelSelectedImage:
       "https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/292611329.jpg?k=289e33b1ed4a7b07b3243657b600d9d0cb934b74c795b7e16ca2b38d2961ac16&o=&hp=1",
-    priceOnOneDay: "70",
+    priceOnOneDay: 70,
     reviews: "0.322",
     rating: "2.5",
     images: [

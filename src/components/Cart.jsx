@@ -6,9 +6,14 @@ import { AppActions } from "../redux";
 const Cart = () => {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
+  const totalPrice = useSelector((state) => state.totalPrice);
 
   return (
     <div name="cart">
+      <div>
+        <h1 className="flex justify-center">Total price</h1>
+        <h1 className="flex justify-center">${totalPrice}</h1>
+      </div>
       {cart.map((item) => (
         <div key={item.id}>
           {console.log(item)}
