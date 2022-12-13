@@ -19,11 +19,42 @@ const Hotel = ({
   rating,
   checkForMediumScreen,
 }) => {
-  const [selectedimg, setSelectedImg] = React.useState(HotelSelectedImage);
-
+  const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
-
+  const [selectedimg, setSelectedImg] = React.useState(HotelSelectedImage);
+  const [isAddedInCart, setIsAddedInCart] = React.useState(true);
   const starsOfHotel = Number(stars);
+
+  const addToCartHandler = () => {
+    setIsAddedInCart(!isAddedInCart);
+    dispatch(
+      AppActions.addToCart({
+        HotelTitle,
+        HotelSelectedImage,
+        stars,
+        HotelImages,
+        priceOnOneDay,
+        reviews,
+        rating,
+        checkForMediumScreen,
+      })
+    );
+  };
+  const removeFromCartHandler = () => {
+    setIsAddedInCart(!isAddedInCart);
+    dispatch(
+      AppActions.removeItem({
+        HotelTitle,
+        HotelSelectedImage,
+        stars,
+        HotelImages,
+        priceOnOneDay,
+        reviews,
+        rating,
+        checkForMediumScreen,
+      })
+    );
+  };
   return (
     <div className="w-full col-span-2 md:col-span-1 row-span-1 xl:col-span-1 relative">
       <div
@@ -126,6 +157,23 @@ const Hotel = ({
           >
             <p className="text-[#ededed] font-medium">{rating}</p>
           </div>
+        </div>
+        <div className="flex justify-center">
+          {!isAddedInCart ? (
+            <button
+              onClick={removeFromCartHandler}
+              className="landmark-cart-btn-added hover:cursor-pointer"
+            >
+              <p>added</p>
+            </button>
+          ) : (
+            <button
+              onClick={addToCartHandler}
+              className="landmark-cart-btn hover:bg-[#f51767] hover:text-white"
+            >
+              <p>add to cart</p>
+            </button>
+          )}
         </div>
       </div>
     </div>
