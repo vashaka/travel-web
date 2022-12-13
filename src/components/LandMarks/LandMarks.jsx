@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { RiStarSFill } from "react-icons/ri";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { AppActions } from "../../redux";
 import { Link } from "react-scroll";
 import { LandmarksArray } from "../../data/LandMarks";
@@ -11,18 +11,19 @@ const styles = {
 };
 
 const Landmarks = ({
-  LandMarkTitle,
   id,
+  title,
   stars,
-  LandMarkSelectedImage,
-  LandMarkImages,
-  PriceToGetThere,
+  selectedImage,
+  images,
+  price,
   reviews,
   rating,
   checkForMediumScreen,
 }) => {
-  const [isAddedInCart, setIsAddedInCart] = useState(true);
-  const [selectedimg, setSelectedImg] = React.useState(LandMarkSelectedImage);
+  const cart = useSelector((state) => state.cart);
+
+  const [selectedimg, setSelectedImg] = React.useState(selectedImage);
 
   const dispatch = useDispatch();
 
@@ -54,15 +55,14 @@ const Landmarks = ({
   };
 
   const addToCartHandler = () => {
-    setIsAddedInCart(!isAddedInCart);
     dispatch(
       AppActions.addItem({
-        LandMarkTitle,
+        title,
         id,
         stars,
-        LandMarkSelectedImage,
-        LandMarkImages,
-        PriceToGetThere,
+        selectedImage,
+        images,
+        price,
         reviews,
         rating,
         checkForMediumScreen,
@@ -71,15 +71,14 @@ const Landmarks = ({
   };
 
   const removeFromCartHandler = () => {
-    setIsAddedInCart(!isAddedInCart);
     dispatch(
       AppActions.removeItem({
-        LandMarkTitle,
+        title,
         id,
         stars,
-        LandMarkSelectedImage,
-        LandMarkImages,
-        PriceToGetThere,
+        selectedImage,
+        images,
+        price,
         reviews,
         rating,
         checkForMediumScreen,
@@ -109,7 +108,7 @@ const Landmarks = ({
             }}
             onClick={() => recieveCoordinates(id)}
           >
-            <p className="">{LandMarkTitle}</p>
+            <p className="">{title}</p>
             <div className="flex justify-center">
               {starsOfHotel === 2 && (
                 <>
@@ -154,7 +153,7 @@ const Landmarks = ({
 
             {checkForMediumScreen && (
               <div className="grid grid-flow-col gap-0 mt-1 md:px-40 lg:px-0">
-                {LandMarkImages?.map((HotelImage) => (
+                {images?.map((HotelImage) => (
                   <img
                     key={HotelImage.image}
                     src={HotelImage.image}
@@ -168,7 +167,7 @@ const Landmarks = ({
             )}
             {!checkForMediumScreen && (
               <div className="grid grid-flow-col gap-0 mt-1">
-                {LandMarkImages?.map((HotelImage) => (
+                {images?.map((HotelImage) => (
                   <img
                     key={HotelImage}
                     src={HotelImage}
@@ -184,7 +183,7 @@ const Landmarks = ({
               <p className="text-sm text-gray-400">Trip Costs</p>
             </div>
             <div className="flex justify-start -mt-1 mx-4 md:mx-1">
-              <p className="font-medium">USD {PriceToGetThere}</p>
+              <p className="font-medium">USD {price}</p>
             </div>
             <div className="flex justify-end -mt-[2.7rem] mx-4 md:mx-1">
               <div className="">
@@ -202,22 +201,22 @@ const Landmarks = ({
               </div>
             </div>
             <div className="mt-2 flex justify-center">
-              {isAddedInCart ? (
-                <Link to="">
-                  <button
-                    onClick={addToCartHandler}
-                    className="landmark-cart-btn hover:bg-[#f51767] hover:text-white"
-                  >
-                    <p>add to cart</p>
-                  </button>
-                </Link>
-              ) : (
+              {cart.find((item) => item.id === id) ? (
                 <Link to="">
                   <button
                     onClick={removeFromCartHandler}
                     className="landmark-cart-btn-added hover:cursor-pointer"
                   >
                     <p>added</p>
+                  </button>
+                </Link>
+              ) : (
+                <Link to="">
+                  <button
+                    onClick={addToCartHandler}
+                    className="landmark-cart-btn hover:bg-[#f51767] hover:text-white"
+                  >
+                    <p>add to cart</p>
                   </button>
                 </Link>
               )}

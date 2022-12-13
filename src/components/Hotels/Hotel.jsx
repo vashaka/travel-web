@@ -10,11 +10,11 @@ const styles = {
 };
 
 const Hotel = ({
-  HotelTitle,
-  HotelSelectedImage,
+  title,
+  selectedImage,
   stars,
-  HotelImages,
-  priceOnOneDay,
+  images,
+  price,
   reviews,
   rating,
   checkForMediumScreen,
@@ -22,20 +22,17 @@ const Hotel = ({
 }) => {
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
-  const [selectedimg, setSelectedImg] = React.useState(HotelSelectedImage);
-  const isAdded = useSelector((state) => state.isAdded);
-  const [isAddedInCart, setIsAddedInCart] = React.useState(false);
+  const [selectedimg, setSelectedImg] = React.useState(selectedImage);
   const starsOfHotel = Number(stars);
 
   const addToCartHandler = () => {
-    setIsAddedInCart(!isAddedInCart);
     dispatch(
       AppActions.addItem({
-        HotelTitle,
-        HotelSelectedImage,
+        title,
+        selectedImage,
         stars,
-        HotelImages,
-        priceOnOneDay,
+        images,
+        price,
         reviews,
         rating,
         checkForMediumScreen,
@@ -44,14 +41,13 @@ const Hotel = ({
     );
   };
   const removeFromCartHandler = () => {
-    setIsAddedInCart(!isAddedInCart);
     dispatch(
       AppActions.removeItem({
-        HotelTitle,
-        HotelSelectedImage,
+        title,
+        selectedImage,
         stars,
-        HotelImages,
-        priceOnOneDay,
+        images,
+        price,
         reviews,
         rating,
         checkForMediumScreen,
@@ -70,7 +66,7 @@ const Hotel = ({
         }}
         // id="hotels"
       >
-        <p className="">{HotelTitle}</p>
+        <p className="">{title}</p>
         <div className="flex justify-center">
           {starsOfHotel === 2 && (
             <>
@@ -115,7 +111,7 @@ const Hotel = ({
 
         {checkForMediumScreen && (
           <div className="grid grid-flow-col gap-0 mt-1 md:px-40 lg:px-0">
-            {HotelImages?.map((HotelImage) => (
+            {images?.map((HotelImage) => (
               <img
                 key={HotelImage.image}
                 src={HotelImage.image}
@@ -129,7 +125,7 @@ const Hotel = ({
         )}
         {!checkForMediumScreen && (
           <div className="grid grid-flow-col gap-0 mt-1">
-            {HotelImages?.map((HotelImage) => (
+            {images?.map((HotelImage) => (
               <img
                 key={HotelImage}
                 src={HotelImage}
@@ -145,7 +141,7 @@ const Hotel = ({
           <p className="text-sm text-gray-400">1 night, 2 adults</p>
         </div>
         <div className="flex justify-start -mt-1 mx-4 md:mx-1">
-          <p className="font-medium">USD {priceOnOneDay}</p>
+          <p className="font-medium">USD {price}</p>
         </div>
         <div className="flex justify-end -mt-[2.7rem] mx-4 md:mx-1">
           <div className="">
@@ -163,7 +159,7 @@ const Hotel = ({
           </div>
         </div>
         <div className="flex justify-center">
-          {isAddedInCart ? (
+          {cart.find((item) => item.id === id) ? (
             <button
               onClick={removeFromCartHandler}
               className="landmark-cart-btn-added hover:cursor-pointer"

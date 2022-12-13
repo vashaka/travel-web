@@ -13,11 +13,11 @@ const HotelContainer = () => {
       >
         {Hotels.map((item) => (
           <Hotel
-            HotelTitle={item.HotelTitle}
+            title={item.HotelTitle}
             stars={item.stars}
-            HotelSelectedImage={item.HotelSelectedImage}
-            HotelImages={item.images}
-            priceOnOneDay={item.priceOnOneDay}
+            selectedImage={item.HotelSelectedImage}
+            images={item.images}
+            price={item.priceOnOneDay}
             reviews={item.reviews}
             rating={item.rating}
             key={item.id}
