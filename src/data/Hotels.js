@@ -1,5 +1,6 @@
 export const Hotels = [
   {
+    id: 100,
     HotelTitle: "Batumi Windham",
     stars: "5",
     HotelSelectedImage:
@@ -19,6 +20,7 @@ export const Hotels = [
     ],
   },
   {
+    id: 101,
     HotelTitle: "Borjomi family-hotel",
     stars: "4",
     HotelSelectedImage:
@@ -38,6 +40,7 @@ export const Hotels = [
     ],
   },
   {
+    id: 102,
     HotelTitle: "Bakuriani fullhouse",
     stars: "2",
     HotelSelectedImage:

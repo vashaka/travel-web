@@ -7,6 +7,7 @@ const initialState = {
   qutaisi: { x: 42.2488567, y: 42.69421460000001, zoomLevel: 10 },
   // cart
   cart: [],
+  itemsInCart: 0,
 };
 
 const AppSlice = createSlice({
@@ -22,12 +23,16 @@ const AppSlice = createSlice({
     // We should Move this to different Redux
     addItem(state, action) {
       state.cart = [...state.cart, action.payload];
+      console.log(state.cart);
+      state.itemsInCart += 1;
     },
     removeItem(state, action) {
       const newCart = state.cart.filter(
         (item) => item.id !== action.payload.id
       );
       state.cart = newCart;
+      console.log(state.cart);
+      state.itemsInCart -= 1;
     },
   },
 });

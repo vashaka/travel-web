@@ -28,7 +28,7 @@ const Hotel = ({
   const addToCartHandler = () => {
     setIsAddedInCart(!isAddedInCart);
     dispatch(
-      AppActions.addToCart({
+      AppActions.addItem({
         HotelTitle,
         HotelSelectedImage,
         stars,
