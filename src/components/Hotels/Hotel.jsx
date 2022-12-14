@@ -62,7 +62,7 @@ const Hotel = ({
   return (
     <div className="w-full col-span-2 md:col-span-1 row-span-1 xl:col-span-1 relative">
       <div
-        className="cursor-pointer	md:hover:scale-105 ease-in duration-300 w-full h-[375px] object-cover"
+        className="md:hover:scale-105 ease-in duration-300 w-full h-[375px] object-cover"
         style={{
           borderRadius: "25px",
           border: "3px solid rgb(255, 255, 255)",
