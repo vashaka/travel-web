@@ -4,6 +4,11 @@ import { Hotels } from "../../data/Hotels";
 import { BatumiHotels } from "../../data/BatumiHotels";
 import { useSelector } from "react-redux";
 
+const styles = {
+  selectedLandmarkTitle: "flex justify-center",
+  span: "text-white bg-[#f51767] px-2 py-1 rounded-sm",
+};
+
 const HotelContainer = () => {
   const selectedIdForFilteringHotels = useSelector(
     (state) => state.selectedIdForFilteringHotels
@@ -19,6 +24,7 @@ const HotelContainer = () => {
         id="hotels"
       >
         {/* Every Hotel */}
+
         {selectedIdForFilteringHotels.trim().length === 0 &&
           Hotels.map((item) => (
             <Hotel
