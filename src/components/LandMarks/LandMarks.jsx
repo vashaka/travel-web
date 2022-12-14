@@ -20,6 +20,7 @@ const Landmarks = ({
   reviews,
   rating,
   checkForMediumScreen,
+  idForSelectedHotels,
 }) => {
   const cart = useSelector((state) => state.cart);
 
@@ -70,6 +71,7 @@ const Landmarks = ({
         reviews,
         rating,
         checkForMediumScreen,
+        idForSelectedHotels,
       })
     );
   };
@@ -86,6 +88,7 @@ const Landmarks = ({
         reviews,
         rating,
         checkForMediumScreen,
+        idForSelectedHotels,
       })
     );
   };

@@ -18,6 +18,7 @@ const LandMarkContainer = () => {
             rating={item.rating}
             key={item.id}
             id={item.id}
+            idForSelectedHotels={item.idForSelectedHotels}
           />
         ))}
       </div>

@@ -10,6 +10,7 @@ const initialState = {
   cart: [],
   itemsInCart: 0,
   totalPrice: 0,
+  selectedIdForFilteringHotels: "",
 };
 
 const AppSlice = createSlice({
@@ -27,6 +28,7 @@ const AppSlice = createSlice({
       state.cart = [...state.cart, action.payload];
       state.itemsInCart += 1;
       state.totalPrice = state.totalPrice + action.payload.price;
+      state.selectedIdForFilteringHotels += action.payload.idForSelectedHotels;
     },
     removeItem(state, action) {
       const newCart = state.cart.filter(
