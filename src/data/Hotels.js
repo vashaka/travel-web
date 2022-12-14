@@ -2,7 +2,6 @@ export const Hotels = [
   {
     id: 100,
     HotelTitle: "Batumi Windham",
-    landmarkTitle: "Batumi",
     stars: "5",
     HotelSelectedImage:
       "https://t-cf.bstatic.com/xdata/images/hotel/max1280x900/391436436.jpg?k=5cc7b048a73c5a270d2ad144ccf7b22d9bbb7d82ee12360a6761beffdac0d27f&o=&hp=1",
@@ -23,7 +22,6 @@ export const Hotels = [
   {
     id: 101,
     HotelTitle: "Borjomi family-hotel",
-    landmarkTitle: "Borjomi",
     stars: "4",
     HotelSelectedImage:
       "https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/292611194.jpg?k=e2164587614309533dc4aa776a4f90688aa682fdfc90da5d8a12f3a8ab3bb15a&o=&hp=1",
@@ -44,7 +42,6 @@ export const Hotels = [
   {
     id: 102,
     HotelTitle: "Bakuriani fullhouse",
-    landmarkTitle: "Bakuriani",
     stars: "2",
     HotelSelectedImage:
       "https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/292611329.jpg?k=289e33b1ed4a7b07b3243657b600d9d0cb934b74c795b7e16ca2b38d2961ac16&o=&hp=1",
