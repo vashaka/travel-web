@@ -1,4 +1,4 @@
-export const Hotels = [
+export const AllHotels = [
   {
     id: 100,
     HotelTitle: "Batumi Windham",

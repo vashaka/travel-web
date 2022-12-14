@@ -1,7 +1,7 @@
 import React from "react";
 import Hotel from "./Hotel";
-import { Hotels } from "../../data/Hotels";
-import { BatumiHotels } from "../../data/BatumiHotels";
+import { AllHotels } from "../../data/Hotels/AllHotels";
+import { BatumiHotels } from "../../data/Hotels/BatumiHotels";
 import { useSelector } from "react-redux";
 
 const styles = {
@@ -15,9 +15,11 @@ const HotelContainer = () => {
   );
   return (
     <div className="max-w-[1240px] m-auto py-16 px-4 text-center">
-      <h1 className="text-3xl text-[#f51767]">Choose Your Hotel</h1>
+      <h1 className="text-3xl text-[#f51767]" id="hotels">
+        Choose Your Hotels
+      </h1>
       <p className="text-lg">
-        Tap on your favourite Landmark and filter Hotels
+        Add to Cart your favourite Landmarks and see filtered Hotels
       </p>
       {/* Hotel Titles which are added in Cart */}
       <div className="flex justify-center">
@@ -88,13 +90,10 @@ const HotelContainer = () => {
           </div>
         )}
       </div>
-      <div
-        className="grid grid-rows-none md:grid-cols-2 lg:grid-cols-3 py-4 gap-2 md:gap-4"
-        id="hotels"
-      >
+      <div className="grid grid-rows-none md:grid-cols-2 lg:grid-cols-3 py-4 gap-2 md:gap-4">
         {/* Every Hotel */}
         {selectedIdForFilteringHotels.trim().length === 0 &&
-          Hotels.map((item) => (
+          AllHotels.map((item) => (
             <Hotel
               title={item.HotelTitle}
               stars={item.stars}

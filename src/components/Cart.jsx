@@ -3,22 +3,25 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { AppActions } from "../redux";
 
+const styles = {
+  center: "flex justify-center",
+};
+
 const Cart = () => {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
   const totalPrice = useSelector((state) => state.totalPrice);
 
   return (
-    <div name="cart">
+    <div>
       <div>
-        <h1 className="flex justify-center">Total price</h1>
-        <h1 className="flex justify-center">${totalPrice}</h1>
+        <h1 className={styles.center}>Shopping Cart</h1>
       </div>
       {cart.map((item) => (
         <div key={item.id}>
-          <h1 className="flex justify-center">{item.title}</h1>
+          <h1 className={styles.center}>{item.title}</h1>
           <img src={item.selectedImage} width={350} alt="main_image" />
-          <div className="flex justify-center">
+          <div className={styles.center}>
             <button
               onClick={() => {
                 dispatch(AppActions.removeItem(item));
@@ -34,6 +37,12 @@ const Cart = () => {
           </div>
         </div>
       ))}
+      <div>
+        <p className={styles.center}>Total price</p>
+        <p className={`${styles.center} text-2xl`} name="cart">
+          ${totalPrice}
+        </p>
+      </div>
     </div>
   );
 };
