@@ -21,6 +21,26 @@ export const Hotels = [
   },
   {
     id: 101,
+    HotelTitle: "Orbi City Hotel Batumi GE",
+    stars: "5",
+    HotelSelectedImage:
+      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/410295895.jpg?k=19eca41973c8fbab7b435906ac2b0100b8e6f5f85e232f06d6b2b7c20af77794&o=&hp=1",
+    priceOnOneDay: 156,
+    reviews: "1.122",
+    rating: "4.8",
+    images: [
+      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/410295895.jpg?k=19eca41973c8fbab7b435906ac2b0100b8e6f5f85e232f06d6b2b7c20af77794&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/410385308.jpg?k=31e612b7272075783a3917a249ed6676654f639228e22e9517210fdfcec9a73b&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/410380201.jpg?k=39630a81901f838f8920962b86e73e8b53bf3095bcbd9a54bd820816dadd0d90&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/410383445.jpg?k=9b7bb5801645f07cc10a6904659c83137c4ad2cc217939434ddc6462bed465ff&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/410383591.jpg?k=633a7ad00d36c444f22c10366fed51adb3a7e9648e236a5190d3bb93a1665b9a&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/356118269.jpg?k=a1035217517d4715e4877445e342b0ff4f34526c4b3bb48463e2d026ea1c646e&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/356118285.jpg?k=103dd32945702df6aeaac24adf9dae469d4618507b3a77f9e84445c460f8cfde&o=&hp=1",
+      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/410382817.jpg?k=ae09b252073a041fa74bd4ab402404843233f56dba00da5c38978c04a8659de9&o=&hp=1",
+    ],
+  },
+  {
+    id: 102,
     HotelTitle: "Borjomi family-hotel",
     stars: "4",
     HotelSelectedImage:
@@ -40,7 +60,7 @@ export const Hotels = [
     ],
   },
   {
-    id: 102,
+    id: 103,
     HotelTitle: "Bakuriani fullhouse",
     stars: "2",
     HotelSelectedImage:

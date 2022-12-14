@@ -19,12 +19,80 @@ const HotelContainer = () => {
       <p className="text-lg">
         Tap on your favourite Landmark and filter Hotels
       </p>
+      {/* Hotel Titles which are added in Cart */}
+      <div className="flex justify-center">
+        {/* 1 ,2, 3 */}
+        {selectedIdForFilteringHotels.includes("1") && (
+          <div className={styles.selectedLandmarkTitle}>
+            <h1 className="mt-2">
+              <span className={styles.span}>Mestia, Svaneti</span>
+            </h1>
+          </div>
+        )}
+        {selectedIdForFilteringHotels.includes("2") && (
+          <div className={styles.selectedLandmarkTitle}>
+            <h1 className="mt-2 ml-2">
+              <span className={styles.span}>Ushguli</span>
+            </h1>
+          </div>
+        )}
+        {selectedIdForFilteringHotels.includes("3") && (
+          <div className={styles.selectedLandmarkTitle}>
+            <h1 className="mt-2 ml-2">
+              <span className={styles.span}>Batumi</span>
+            </h1>
+          </div>
+        )}
+        {/* 4, 5, 6 */}
+        {selectedIdForFilteringHotels.includes("4") && (
+          <div className={styles.selectedLandmarkTitle}>
+            <h1 className="mt-2 ml-2">
+              <span className={styles.span}>kazbegi</span>
+            </h1>
+          </div>
+        )}
+        {selectedIdForFilteringHotels.includes("5") && (
+          <div className={styles.selectedLandmarkTitle}>
+            <h1 className="mt-2 ml-2">
+              <span className={styles.span}>kakheti</span>
+            </h1>
+          </div>
+        )}
+        {selectedIdForFilteringHotels.includes("6") && (
+          <div className={styles.selectedLandmarkTitle}>
+            <h1 className="mt-2 ml-2">
+              <span className={styles.span}>Ananuri</span>
+            </h1>
+          </div>
+        )}
+        {/* 7, 8 */}
+        {selectedIdForFilteringHotels.includes("7") && (
+          <div className={styles.selectedLandmarkTitle}>
+            <h1 className="mt-2 ml-2">
+              <span className={styles.span}>Uflistsikhe</span>
+            </h1>
+          </div>
+        )}
+        {selectedIdForFilteringHotels.includes("8") && (
+          <div className={styles.selectedLandmarkTitle}>
+            <h1 className="mt-2 ml-2">
+              <span className={styles.span}>Tusheti</span>
+            </h1>
+          </div>
+        )}
+        {selectedIdForFilteringHotels.includes("9") && (
+          <div className={styles.selectedLandmarkTitle}>
+            <h1 className="mt-2 ml-2">
+              <span className={styles.span}>Borjomi</span>
+            </h1>
+          </div>
+        )}
+      </div>
       <div
         className="grid grid-rows-none md:grid-cols-2 lg:grid-cols-3 py-4 gap-2 md:gap-4"
         id="hotels"
       >
         {/* Every Hotel */}
-
         {selectedIdForFilteringHotels.trim().length === 0 &&
           Hotels.map((item) => (
             <Hotel

@@ -24,24 +24,38 @@ const AppSlice = createSlice({
       state.coordinates = action.payload;
     },
     // We should Move this to different Redux
+    setSelectedLadnmarkId(state, action) {
+      state.selectedIdForFilteringHotels += action.payload?.idForSelectedHotels;
+    },
+    removeSelectedLandmarkid(state, action) {
+      state.selectedIdForFilteringHotels =
+        state.selectedIdForFilteringHotels.replace(
+          action.payload?.idForSelectedHotels,
+          ""
+        );
+    },
     addItem(state, action) {
+      if (state.cart.find((item) => item.title === action.payload.title)) {
+        return;
+      }
       state.cart = [...state.cart, action.payload];
       state.itemsInCart += 1;
       state.totalPrice = state.totalPrice + action.payload.price;
-      state.selectedIdForFilteringHotels += action.payload.idForSelectedHotels;
     },
+
     removeItem(state, action) {
+      if (state.cart.find((item) => item.title === action.payload.title)) {
+        const updatedCart = state.cart.filter(
+          (item) => item.title !== action.payload.title
+        );
+        state.cart = updatedCart;
+      }
       const newCart = state.cart.filter(
         (item) => item.id !== action.payload.id
       );
       state.cart = newCart;
       state.itemsInCart -= 1;
       state.totalPrice = state.totalPrice - action.payload.price;
-      state.selectedIdForFilteringHotels =
-        state.selectedIdForFilteringHotels.replace(
-          action.payload.idForSelectedHotels,
-          ""
-        );
     },
     activateBumpAnimation(state) {
       state.bumpAnimation = true;

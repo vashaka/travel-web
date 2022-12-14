@@ -163,7 +163,8 @@ const Hotel = ({
           </div>
         </div>
         <div className="flex justify-center">
-          {cart.find((item) => item.id === id) ? (
+          {cart.find((item) => item.id === id) ||
+          cart.find((item) => item.title === title) ? (
             <button
               onClick={removeFromCartHandler}
               className="landmark-cart-btn-added hover:cursor-pointer"

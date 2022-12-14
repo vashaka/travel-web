@@ -74,6 +74,11 @@ const Landmarks = ({
         idForSelectedHotels,
       })
     );
+    dispatch(
+      AppActions.setSelectedLadnmarkId({
+        idForSelectedHotels,
+      })
+    );
   };
 
   const removeFromCartHandler = () => {
@@ -88,6 +93,11 @@ const Landmarks = ({
         reviews,
         rating,
         checkForMediumScreen,
+        idForSelectedHotels,
+      })
+    );
+    dispatch(
+      AppActions.removeSelectedLandmarkid({
         idForSelectedHotels,
       })
     );

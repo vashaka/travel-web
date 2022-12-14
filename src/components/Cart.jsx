@@ -16,11 +16,19 @@ const Cart = () => {
       </div>
       {cart.map((item) => (
         <div key={item.id}>
-          {console.log(item)}
           <h1 className="flex justify-center">{item.title}</h1>
           <img src={item.selectedImage} width={350} alt="main_image" />
           <div className="flex justify-center">
-            <button onClick={() => dispatch(AppActions.removeItem(item))}>
+            <button
+              onClick={() => {
+                dispatch(AppActions.removeItem(item));
+                dispatch(
+                  AppActions.removeSelectedLandmarkid({
+                    idForSelectedHotels: item.idForSelectedHotels,
+                  })
+                );
+              }}
+            >
               Delete
             </button>
           </div>
