@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppActions } from "../../redux";
 
 const styles = {
-  img: "h-full rounded-lg hover:scale-110",
+  img: "md:h-[30px] h-[40px] rounded-lg hover:scale-110",
 };
 
 const Hotel = ({
