@@ -5,7 +5,7 @@ export const BatumiHotels = [
     stars: "5",
     HotelSelectedImage:
       "https://t-cf.bstatic.com/xdata/images/hotel/max1280x900/391436436.jpg?k=5cc7b048a73c5a270d2ad144ccf7b22d9bbb7d82ee12360a6761beffdac0d27f&o=&hp=1",
-    priceOnOneDay: "170",
+    priceOnOneDay: 170,
     reviews: "1.322",
     rating: "4.5",
     images: [
@@ -25,7 +25,7 @@ export const BatumiHotels = [
     stars: "5",
     HotelSelectedImage:
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/410295895.jpg?k=19eca41973c8fbab7b435906ac2b0100b8e6f5f85e232f06d6b2b7c20af77794&o=&hp=1",
-    priceOnOneDay: "156",
+    priceOnOneDay: 156,
     reviews: "1.122",
     rating: "4.8",
     images: [

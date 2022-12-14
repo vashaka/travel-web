@@ -37,6 +37,11 @@ const AppSlice = createSlice({
       state.cart = newCart;
       state.itemsInCart -= 1;
       state.totalPrice = state.totalPrice - action.payload.price;
+      state.selectedIdForFilteringHotels =
+        state.selectedIdForFilteringHotels.replace(
+          action.payload.idForSelectedHotels,
+          ""
+        );
     },
     activateBumpAnimation(state) {
       state.bumpAnimation = true;
