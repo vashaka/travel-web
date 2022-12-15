@@ -5,6 +5,7 @@ const initialState = {
   ActivePlan: "VIP",
   coordinates: { x: 42.2756944, y: 43.7540462, zoomLevel: 8 },
   qutaisi: { x: 42.2488567, y: 42.69421460000001, zoomLevel: 10 },
+  selectedDestination: "Georgia",
   // cart
   bumpAnimation: false,
   cart: [],
@@ -22,6 +23,7 @@ const AppSlice = createSlice({
     },
     setCoordinates(state, action) {
       state.coordinates = action.payload;
+      state.selectedDestination = action.payload;
     },
     // We should Move this to different Redux
     setSelectedLadnmarkId(state, action) {
