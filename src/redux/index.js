@@ -6,13 +6,12 @@ const initialState = {
   coordinates: { x: 42.2756944, y: 43.7540462, zoomLevel: 8 },
   qutaisi: { x: 42.2488567, y: 42.69421460000001, zoomLevel: 10 },
   selectedDestination: "Georgia",
-  // for selectedLandmarkHotels Logic
-  selectedLandmarkId: "",
-  // Cart Logic
-  // itemsInCart: 0,
+  // cart
   bumpAnimation: false,
-  HotelsCart: [],
-  landmarksCart: [],
+  cart: [],
+  itemsInCart: 0,
+  totalPrice: 0,
+  selectedIdForFilteringHotels: "",
 };
 
 const AppSlice = createSlice({
@@ -24,52 +23,47 @@ const AppSlice = createSlice({
     },
     setCoordinates(state, action) {
       state.coordinates = action.payload;
-    },
-    setSelectedDestination(state, action) {
       state.selectedDestination = action.payload;
     },
-    // For Landmarks ----------------------------------------------------------------
+    // We should Move this to different Redux
     setSelectedLadnmarkId(state, action) {
-      // landmarks logic for generating hotels
-      state.selectedLandmarkId = state.selectedLandmarkId + action.payload;
+      state.selectedIdForFilteringHotels += action.payload?.idForSelectedHotels;
     },
-    // This function removes selectedHotel with selectedHotelId with replace Method
-    removeSelectedLadmarkId(state, action) {
-      state.selectedLandmarkId = state.selectedLandmarkId.replace(
-        action.payload,
-        ""
-      );
+    removeSelectedLandmarkid(state, action) {
+      state.selectedIdForFilteringHotels =
+        state.selectedIdForFilteringHotels.replace(
+          action.payload?.idForSelectedHotels,
+          ""
+        );
     },
-    // Landmarks cart ----------------------------------------------------------------
-    addToLandmarksCart(state, action) {
-      state.landmarksCart = [...state.landmarksCart, action.payload];
-    },
-    // When Removed Landmarks got Its onw Hotels
-    removeFromLandmarksCart(state, action) {
-      const newCart = state.landmarksCart.filter(
-        (item) => item.LandMarkTitle !== action.payload
-      );
-      state.landmarksCart = newCart;
-    },
-    // HOTELS CART ----------------------------------------------------------------
-    addToHotelsCart(state, action) {
-      // alert(action.payload + " is Added");
-      // console.log(action.payload);
-      state.HotelsCart = [...state.HotelsCart, action.payload];
-    },
-    removeFromHotelsCart(state, action) {
-      const newCart = state.HotelsCart.filter(
-        (item) => item.HotelTitle !== action.payload
-      );
-      state.HotelsCart = newCart;
-      console.log(state.HotelsCart + " Cart");
+    addItem(state, action) {
+      if (state.cart.find((item) => item.title === action.payload.title)) {
+        return;
+      }
+      state.cart = [...state.cart, action.payload];
+      state.itemsInCart += 1;
+      state.totalPrice = state.totalPrice + action.payload.price;
     },
 
-    // Bump Animation -----------------------------------------------------------------
+    removeItem(state, action) {
+      if (state.cart.find((item) => item.title === action.payload.title)) {
+        const updatedCart = state.cart.filter(
+          (item) => item.title !== action.payload.title
+        );
+        state.cart = updatedCart;
+      }
+      const newCart = state.cart.filter(
+        (item) => item.id !== action.payload.id
+      );
+      state.cart = newCart;
+      state.itemsInCart -= 1;
+      state.totalPrice = state.totalPrice - action.payload.price;
+    },
     activateBumpAnimation(state) {
       state.bumpAnimation = true;
     },
-    deactivateBumpAnimation(state) {
+
+    deActivateBumpAnimation(state) {
       state.bumpAnimation = false;
     },
   },
