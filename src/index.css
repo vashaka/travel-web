@@ -189,6 +189,35 @@
   color: white;
 }
 
+ul li {
+  position: relative;
+}
+
+ul li::after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 3px;
+  border-radius: 10px;
+  position: relative;
+  margin: 0px auto;
+  top: 2px;
+  background-color: white;
+}
+
+ul li:hover::after,
+ul li:active::after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 3px;
+  border-radius: 10px;
+  position: relative;
+  margin: 0px auto;
+  top: 2px;
+  background-color: rgb(245, 23, 103);
+}
+
 .cart-btn {
   border: 1px solid rgb(245, 23, 103);
   outline: none;

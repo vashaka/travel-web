@@ -39,7 +39,7 @@ const Navbar = () => {
     >
       <div className="flex items-center justify-between h-16 px-4 bg-white">
         <div>
-          <h1 className="cursor-pointer	hover:scale-110 ease-in duration-300 text-[#f51767]">
+          <h1 className="cursor-pointer ease-in duration-300 text-[#f51767] text-3xl">
             <Link to="slider" smooth={true} duration={400}>
               BREATHE.
             </Link>
@@ -47,27 +47,22 @@ const Navbar = () => {
         </div>
 
         <ul className="flex items-center sticky">
-          {/* <li className="cursor-pointer	hover:scale-110 ease-in duration-300">
-            <Link to="slider" smooth={true} duration={400}>
-              HOME
-            </Link>
-          </li> */}
-          <li className="cursor-pointer	hover:scale-110 ease-in duration-300">
+          <li className="cursor-pointer ease-in duration-300">
             <Link to="Map" smooth={true} duration={400}>
               GEORGIA
             </Link>
           </li>
-          <li className="cursor-pointer	hover:scale-110 ease-in duration-300">
+          <li className="cursor-pointer ease-in duration-300">
             <Link to="Landmarks" smooth={true} duration={400}>
               LANDMARKS
             </Link>
           </li>
-          <li className="cursor-pointer	hover:scale-110 ease-in duration-300">
+          <li className="cursor-pointer ease-in duration-300">
             <Link to="hotels" smooth={true} duration={400}>
               HOTELS
             </Link>
           </li>
-          <li className="cursor-pointer	hover:scale-110 ease-in duration-300">
+          <li className="cursor-pointer ease-in duration-300">
             <Link to="slider" smooth={true} duration={400}>
               CARS
             </Link>
