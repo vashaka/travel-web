@@ -123,7 +123,10 @@ const Landmarks = ({
               border: "3px solid rgb(255, 255, 255)",
               boxShadow: "rgb(19 15 235 / 15%) 1px 2px 20px",
             }}
-            onClick={() => recieveCoordinates(id)}
+            onClick={() => {
+              recieveCoordinates(id);
+              dispatch(AppActions.setSelectedDestination(title));
+            }}
           >
             <p className="">{title}</p>
             <div className="flex justify-center">

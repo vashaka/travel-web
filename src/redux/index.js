@@ -23,6 +23,8 @@ const AppSlice = createSlice({
     },
     setCoordinates(state, action) {
       state.coordinates = action.payload;
+    },
+    setSelectedDestination(state, action) {
       state.selectedDestination = action.payload;
     },
     // We should Move this to different Redux
