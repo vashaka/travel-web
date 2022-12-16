@@ -31,21 +31,21 @@ const HotelContainer = () => {
       {/* Hotel Titles which are added in Cart */}
       <div className="flex justify-center">
         {/* 1 ,2, 3 */}
-        {selectedIdForFilteringHotels.includes(1) && (
+        {selectedIdForFilteringHotels.trim().includes("1") && (
           <div className={styles.selectedLandmarkTitle}>
             <h1 className="mt-2">
               <span className={styles.span}>Mestia, Svaneti</span>
             </h1>
           </div>
         )}
-        {selectedIdForFilteringHotels.includes(2) && (
+        {selectedIdForFilteringHotels.trim().includes("2") && (
           <div className={styles.selectedLandmarkTitle}>
             <h1 className="mt-2 ml-2">
               <span className={styles.span}>Ushguli</span>
             </h1>
           </div>
         )}
-        {selectedIdForFilteringHotels.includes(3) && (
+        {selectedIdForFilteringHotels.trim().includes("3") && (
           <div className={styles.selectedLandmarkTitle}>
             <h1 className="mt-2 ml-2">
               <span className={styles.span}>Batumi</span>
@@ -53,21 +53,21 @@ const HotelContainer = () => {
           </div>
         )}
         {/* 4, 5, 6 */}
-        {selectedIdForFilteringHotels.includes(4) && (
+        {selectedIdForFilteringHotels.trim().includes("4") && (
           <div className={styles.selectedLandmarkTitle}>
             <h1 className="mt-2 ml-2">
               <span className={styles.span}>kazbegi</span>
             </h1>
           </div>
         )}
-        {selectedIdForFilteringHotels.includes(5) && (
+        {selectedIdForFilteringHotels.trim().includes("5") && (
           <div className={styles.selectedLandmarkTitle}>
             <h1 className="mt-2 ml-2">
               <span className={styles.span}>kakheti</span>
             </h1>
           </div>
         )}
-        {selectedIdForFilteringHotels.includes(6) && (
+        {selectedIdForFilteringHotels.trim().includes("6") && (
           <div className={styles.selectedLandmarkTitle}>
             <h1 className="mt-2 ml-2">
               <span className={styles.span}>Ananuri</span>
@@ -75,28 +75,28 @@ const HotelContainer = () => {
           </div>
         )}
         {/* 7, 8 */}
-        {selectedIdForFilteringHotels.includes(7) && (
+        {selectedIdForFilteringHotels.trim().includes("7") && (
           <div className={styles.selectedLandmarkTitle}>
             <h1 className="mt-2 ml-2">
               <span className={styles.span}>Uflistsikhe</span>
             </h1>
           </div>
         )}
-        {selectedIdForFilteringHotels.includes(8) && (
+        {selectedIdForFilteringHotels.trim().includes("8") && (
           <div className={styles.selectedLandmarkTitle}>
             <h1 className="mt-2 ml-2">
               <span className={styles.span}>Tusheti</span>
             </h1>
           </div>
         )}
-        {selectedIdForFilteringHotels.includes(9) && (
+        {selectedIdForFilteringHotels.trim().includes("9") && (
           <div className={styles.selectedLandmarkTitle}>
             <h1 className="mt-2 ml-2">
               <span className={styles.span}>Borjomi</span>
             </h1>
           </div>
         )}
-        {selectedIdForFilteringHotels.includes(10) && (
+        {selectedIdForFilteringHotels.includes("ten") && (
           <div className={styles.selectedLandmarkTitle}>
             <h1 className="mt-2 ml-2">
               <span className={styles.span}>Bakuriani</span>
@@ -106,7 +106,7 @@ const HotelContainer = () => {
       </div>
       <div className="grid grid-rows-none md:grid-cols-2 lg:grid-cols-3 py-4 gap-2 md:gap-4">
         {/* Every Hotel */}
-        {selectedIdForFilteringHotels.length === 0 &&
+        {selectedIdForFilteringHotels.trim().length === 0 &&
           AllHotels.map((item) => (
             <Hotel
               title={item.HotelTitle}
@@ -122,7 +122,7 @@ const HotelContainer = () => {
           ))}
 
         {/* Svaneti_Hotels 1 ------------------------------------------------------------------------------------------------------------------------------------------------------ */}
-        {selectedIdForFilteringHotels.includes(1) &&
+        {selectedIdForFilteringHotels.trim().includes("1") &&
           SvanetiHotels?.map((item) => (
             <Hotel
               title={item.HotelTitle}
@@ -137,7 +137,7 @@ const HotelContainer = () => {
             />
           ))}
         {/* Ushguli_Hotels 2 ------------------------------------------------------------------------------------------------------------------------------------------------------*/}
-        {selectedIdForFilteringHotels.includes(2) &&
+        {selectedIdForFilteringHotels.trim().includes("2") &&
           UshguliHotels?.map((item) => (
             <Hotel
               title={item.HotelTitle}
@@ -152,7 +152,7 @@ const HotelContainer = () => {
             />
           ))}
         {/* Batumi_hotels 3 ------------------------------------------------------------------------------------------------------------------------------------------------------*/}
-        {selectedIdForFilteringHotels.includes(3) &&
+        {selectedIdForFilteringHotels.trim().includes("3") &&
           BatumiHotels?.map((item) => (
             <Hotel
               title={item.HotelTitle}
@@ -167,7 +167,7 @@ const HotelContainer = () => {
             />
           ))}
         {/* Borjomi_hotels 9 ------------------------------------------------------------------------------------------------------------------------------------------------------*/}
-        {selectedIdForFilteringHotels.includes(9) &&
+        {selectedIdForFilteringHotels.includes("9") &&
           BorjomiHotels?.map((item) => (
             <Hotel
               title={item.HotelTitle}
@@ -181,8 +181,8 @@ const HotelContainer = () => {
               id={item.id}
             />
           ))}
-        {/* Bakuriani_hotels 9 ------------------------------------------------------------------------------------------------------------------------------------------------------*/}
-        {selectedIdForFilteringHotels.includes(10) &&
+        {/* Bakuriani_hotels 10 ------------------------------------------------------------------------------------------------------------------------------------------------------*/}
+        {selectedIdForFilteringHotels.includes("ten") &&
           BakurianiHotels?.map((item) => (
             <Hotel
               title={item.HotelTitle}

@@ -11,7 +11,7 @@ const initialState = {
   cart: [],
   itemsInCart: 0,
   totalPrice: 0,
-  selectedIdForFilteringHotels: [],
+  selectedIdForFilteringHotels: "",
 };
 
 const AppSlice = createSlice({
@@ -29,18 +29,14 @@ const AppSlice = createSlice({
     },
     // We should Move this to different Redux
     setSelectedLadnmarkId(state, action) {
-      state.selectedIdForFilteringHotels = [
-        ...state.selectedIdForFilteringHotels,
-        action.payload?.idForSelectedHotels,
-      ];
-      // state.selectedIdForFilteringHotels += action.payload?.idForSelectedHotels;
+      state.selectedIdForFilteringHotels += action.payload?.idForSelectedHotels;
     },
     removeSelectedLandmarkid(state, action) {
-      const updatedCart = state.selectedIdForFilteringHotels.filter(
-        (item) =>
-          item?.idForSelectedHotels === action.payload?.idForSelectedHotels
-      );
-      state.selectedIdForFilteringHotels = updatedCart;
+      state.selectedIdForFilteringHotels =
+        state.selectedIdForFilteringHotels.replace(
+          action.payload?.idForSelectedHotels,
+          ""
+        );
     },
     addItem(state, action) {
       if (state.cart.find((item) => item.title === action.payload.title)) {

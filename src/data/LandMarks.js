@@ -1,6 +1,6 @@
 export const LandmarksArray = [
   {
-    id: 1,
+    id: "1",
     idForSelectedHotels: 1,
     name: "Mestia , Svaneti",
     side: "West Georgia ",
@@ -26,7 +26,7 @@ export const LandmarksArray = [
     },
   },
   {
-    id: 2,
+    id: "2",
     idForSelectedHotels: 2,
     name: "Ushguli",
     side: "West Georgia",
@@ -52,7 +52,7 @@ export const LandmarksArray = [
     },
   },
   {
-    id: 3,
+    id: "3",
     idForSelectedHotels: 3,
     name: "Batumi",
     side: "West Georgia",
@@ -78,7 +78,7 @@ export const LandmarksArray = [
     },
   },
   {
-    id: 4,
+    id: "4",
     idForSelectedHotels: 4,
     name: "Kazgebi",
     side: "East Georgia",
@@ -104,7 +104,7 @@ export const LandmarksArray = [
     },
   },
   {
-    id: 5,
+    id: "5",
     idForSelectedHotels: 5,
     name: "Kakheti",
     side: "East Georgia",
@@ -130,7 +130,7 @@ export const LandmarksArray = [
     },
   },
   {
-    id: 6,
+    id: "6",
     idForSelectedHotels: 6,
     name: "Ananuri",
     side: "East Georgia",
@@ -156,7 +156,7 @@ export const LandmarksArray = [
     },
   },
   {
-    id: 7,
+    id: "7",
     idForSelectedHotels: 7,
     name: "Uflistsikhe",
     side: "East Georgia",
@@ -182,7 +182,7 @@ export const LandmarksArray = [
     },
   },
   {
-    id: 8,
+    id: "8",
     idForSelectedHotels: 8,
     name: "Tusheti",
     side: "East Georgia",
@@ -209,7 +209,7 @@ export const LandmarksArray = [
   },
 
   {
-    id: 9,
+    id: "9",
     idForSelectedHotels: 9,
     name: "Borjomi",
     side: "East Georgia",
@@ -237,7 +237,7 @@ export const LandmarksArray = [
 
   {
     id: 10,
-    idForSelectedHotels: 10,
+    idForSelectedHotels: "ten",
     name: "Bakuriani",
     side: "East Georgia",
     LandMarkSelectedImage:
