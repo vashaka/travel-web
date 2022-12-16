@@ -27,7 +27,7 @@ const Navbar = () => {
       } else {
         setHideNavbar(false);
       }
-      if (lastScrollY > 750) {
+      if (lastScrollY > 720) {
         setHideNavbar(true);
       }
       if (lastScrollY < 50) {
