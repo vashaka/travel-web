@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import React from "react";
 import Hotel from "./Hotel";
 import { AllHotels } from "../../data/Hotels/Hotels";
@@ -24,11 +25,19 @@ const HotelContainer = () => {
   );
   return (
     <div className="max-w-[1240px] m-auto py-16 px-4 text-center">
-      <h1 className="text-3xl text-[#f51767]" id="hotels">
-        Choose Your Hotels
-      </h1>
-      <p className="text-lg">
-        Add to Cart your favourite Landmarks and see filtered Hotels
+      <div className="flex justify-center">
+        <h1 className="text-white bg-[#f51767] px-2 py-1 rounded-sm">
+          3 step -
+        </h1>
+        <h1 className="text-white text-xs">h</h1>
+        <h1 className="text-xl text-[#f51767] mt-1" id="hotels">
+          Choose Your Hotels
+        </h1>
+      </div>
+
+      <p className="text-md">
+        <span>// </span> Add to Cart your favourite Landmarks and see filtered
+        Hotels
       </p>
       {/* Hotel Titles which are added in Cart */}
       <div className="flex justify-center">
