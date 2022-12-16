@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [scrollTop, setScrollTop] = useState(0);
+  const [hideNavbar, setHideNavbar] = useState(true);
   const bumpAnimation = useSelector((state) => state.bumpAnimation);
   const itemsInCart = useSelector((state) => state.itemsInCart);
 
@@ -18,6 +19,23 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+    let lastScrollY = window.scrollY;
+    window.addEventListener("scroll", () => {
+      if (lastScrollY < window.scrollY) {
+        setHideNavbar(false);
+        console.log(lastScrollY);
+      } else {
+        setHideNavbar(false);
+      }
+      if (lastScrollY > 750) {
+        setHideNavbar(true);
+      }
+      if (lastScrollY < 50) {
+        setHideNavbar(true);
+      }
+      lastScrollY = window.scrollY;
+    });
+
     window.addEventListener("scroll", onScroll);
 
     return () => {
@@ -29,6 +47,7 @@ const Navbar = () => {
     <div
       className="z-20"
       style={{
+        display: hideNavbar ? "block" : "none",
         position: "fixed",
         top: 0,
         left: 0,
