@@ -5,7 +5,7 @@ import { LandmarksArray } from "../../data/LandMarks";
 const LandMarkContainer = () => {
   return (
     <div className="max-w-[1240px] m-auto py-16 px-4 text-center">
-      <div className="flex justify-center">
+      <div className="flex justify-center mb-1">
         <h1 className="text-white bg-[#f51767] px-2 py-1 rounded-sm">
           2 step -
         </h1>
@@ -13,7 +13,7 @@ const LandMarkContainer = () => {
         <h1 className="text-xl text-[#f51767] mt-1">Choose Your Landmarks</h1>
       </div>
 
-      <p className="text-md">
+      <p className="text-md mb-1">
         // Tap on your favourite and check it on the map
       </p>
       <div className="LandMarksContainer grid grid-rows-none md:grid-cols-2 lg:grid-cols-3 py-4 gap-2 md:gap-4">

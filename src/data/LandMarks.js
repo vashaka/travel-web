@@ -2,7 +2,7 @@ export const LandmarksArray = [
   {
     id: "1",
     idForSelectedHotels: 1,
-    name: "Mestia , Svaneti",
+    name: "Mestia, Svaneti",
     side: "West Georgia ",
     LandMarkSelectedImage:
       "https://i.ytimg.com/vi/t198p47m_nU/maxresdefault.jpg",

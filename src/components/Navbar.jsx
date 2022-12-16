@@ -67,8 +67,8 @@ const Navbar = () => {
 
         <ul className="flex items-center sticky">
           <li className="cursor-pointer ease-in duration-300">
-            <Link to="Map" smooth={true} duration={400}>
-              01. GEORGIA
+            <Link to="Plans" smooth={true} duration={400}>
+              01. PLANS
             </Link>
           </li>
           <li className="cursor-pointer ease-in duration-300">

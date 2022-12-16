@@ -24,15 +24,13 @@ const HotelContainer = () => {
     (state) => state.selectedIdForFilteringHotels
   );
   return (
-    <div className="max-w-[1240px] m-auto py-16 px-4 text-center">
+    <div className="max-w-[1240px] m-auto py-16 px-4 text-center" id="hotels">
       <div className="flex justify-center">
         <h1 className="text-white bg-[#f51767] px-2 py-1 rounded-sm">
           3 step -
         </h1>
         <h1 className="text-white text-xs">h</h1>
-        <h1 className="text-xl text-[#f51767] mt-1" id="hotels">
-          Choose Your Hotels
-        </h1>
+        <h1 className="text-xl text-[#f51767] mt-1">Choose Your Hotels</h1>
       </div>
 
       <p className="text-md">
@@ -43,7 +41,17 @@ const HotelContainer = () => {
       <div className="flex justify-center">
         {/* 1 ,2, 3 */}
         {selectedIdForFilteringHotels.trim().includes("1") && (
-          <div className={styles.selectedLandmarkTitle}>
+          <div
+            className={styles.selectedLandmarkTitle}
+            // onClick={() => {
+            //   dispatch(
+            //     AppActions.removeSelectedLandmarkid({
+            //       idForSelectedHotels: "1",
+            //     })
+            //   );
+            //   dispatch(AppActions.removeItem({ title: "Mestia, Svaneti" }));
+            // }}
+          >
             <h1 className="mt-2">
               <span className={styles.span}>Mestia, Svaneti</span>
             </h1>
