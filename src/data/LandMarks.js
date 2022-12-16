@@ -257,8 +257,8 @@ export const LandmarksArray = [
     reviews: "2.123",
     rating: "3.2",
     coordinates: {
-      x: 41.83333,
-      y: 43.3833318,
+      x: 41.750972,
+      y: 43.529185,
     },
   },
 ];

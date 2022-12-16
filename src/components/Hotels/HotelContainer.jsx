@@ -9,7 +9,8 @@ import {
   BakurianiHotels,
 } from "../../data/Hotels/Hotels";
 
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { AppActions } from "../../redux/index";
 
 const styles = {
   selectedLandmarkTitle: "flex justify-center",
@@ -17,6 +18,7 @@ const styles = {
 };
 
 const HotelContainer = () => {
+  const dispatch = useDispatch();
   const selectedIdForFilteringHotels = useSelector(
     (state) => state.selectedIdForFilteringHotels
   );
