@@ -65,8 +65,6 @@ const Navbar = () => {
           </h1>
         </div>
 
-        <div></div>
-
         {/* Hide on Small Screens */}
         <ul className="hidden xl:flex items-center sticky mt-1">
           <li className="cursor-pointer ease-in duration-300">
