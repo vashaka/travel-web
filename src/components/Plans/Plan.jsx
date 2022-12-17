@@ -9,7 +9,7 @@ const Plan = ({ PlanTitle, amountOfLandmarks }) => {
 
   return (
     <div className="w-full col-span-2 md:col-span-1 row-span-1 xl:col-span-1 relative">
-      <Link to="Map" smooth={true} duration={300}>
+      <Link to="Plans" smooth={true} duration={300}>
         <div
           onClick={() => dispatch(AppActions.setActivePlan(PlanTitle))}
           className="hover:scale-105 cursor-pointer ease-in duration-300 w-full h-[auto] object-cover"
