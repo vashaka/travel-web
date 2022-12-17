@@ -27,7 +27,7 @@ const AppSlice = createSlice({
     setSelectedDestination(state, action) {
       state.selectedDestination = action.payload;
     },
-    // We should Move this to different Redux
+    // We should Move this to different Redux -----------------------------------------------------------------
     setSelectedLadnmarkId(state, action) {
       state.selectedIdForFilteringHotels += action.payload?.idForSelectedHotels;
     },

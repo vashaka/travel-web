@@ -56,7 +56,7 @@ const Navbar = () => {
         borderBottom: "0.5px solid hsl(0, 0%, 88%)",
       }}
     >
-      <div className="flex items-center justify-between h-16 px-4 bg-white">
+      <div className="flex items-center justify-between h-16 px-4 bg-white opacity-95">
         <div>
           <h1 className="cursor-pointer ease-in duration-300 text-[#f51767] text-3xl">
             <Link to="slider" smooth={true} duration={400}>
@@ -65,7 +65,10 @@ const Navbar = () => {
           </h1>
         </div>
 
-        <ul className="flex items-center sticky">
+        <div></div>
+
+        {/* Hide on Small Screens */}
+        <ul className="hidden xl:flex items-center sticky mt-1">
           <li className="cursor-pointer ease-in duration-300">
             <Link to="Plans" smooth={true} duration={400}>
               01. PLANS
@@ -87,7 +90,7 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-        <Link to="cart" smooth={true} duration={400}>
+        <Link to="cart" smooth={true} duration={400} className="hidden xl:flex">
           {bumpAnimation ? (
             <button
               // className="cart-btn ml-2 nav-cart-btn"
