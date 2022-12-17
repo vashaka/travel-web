@@ -2,6 +2,7 @@ import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 import { useSelector, useDispatch } from "react-redux";
 
 const MapComponent = () => {
+  const selectedDestination = useSelector((state) => state.selectedDestination);
   const coordinates = useSelector((state) => state.coordinates);
   const qutaisi = useSelector((state) => state.qutaisi); // Testing
 
@@ -10,8 +11,6 @@ const MapComponent = () => {
   });
 
   if (!isLoaded) return <div>Loading...</div>;
-
-  console.log(coordinates.x);
 
   // we can use marker if we want it on map
 
@@ -25,7 +24,9 @@ const MapComponent = () => {
       <div className="flex justify-center">
         <h1 className="mb-2">
           Selected Destination
-          <span className="text-white bg-[#f51767] px-2 py-1">Batumi</span>
+          <span className="text-white bg-[#f51767] px-2 py-1">
+            {selectedDestination}
+          </span>
         </h1>
       </div>
       <div className="hidden lg:flex justify-center">
@@ -35,7 +36,7 @@ const MapComponent = () => {
           mapContainerClassName="map-container"
           className="w-[180%] h-[80vh]"
         >
-          <Marker position={{ lat: coordinates.x, lng: coordinates.y }} /> 
+          <Marker position={{ lat: coordinates.x, lng: coordinates.y }} />
         </GoogleMap>
       </div>
 
@@ -47,7 +48,7 @@ const MapComponent = () => {
           mapContainerClassName="map-container-for-small-screens"
           className="w-[180%] h-[80vh]"
         >
-          <Marker position={{ lat: coordinates.x, lng: coordinates.y }} /> 
+          <Marker position={{ lat: coordinates.x, lng: coordinates.y }} />
         </GoogleMap>
       </div>
     </>

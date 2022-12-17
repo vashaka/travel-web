@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { RiStarSFill } from "react-icons/ri";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { AppActions } from "../../redux";
 import { Link } from "react-scroll";
 import { LandmarksArray } from "../../data/LandMarks";
@@ -11,18 +11,20 @@ const styles = {
 };
 
 const Landmarks = ({
-  LandMarkTitle,
   id,
+  title,
   stars,
-  LandMarkSelectedImage,
-  LandMarkImages,
-  PriceToGetThere,
+  selectedImage,
+  images,
+  price,
   reviews,
   rating,
   checkForMediumScreen,
+  idForSelectedHotels,
 }) => {
-  const [isAddedInCart, setIsAddedInCart] = useState(true);
-  const [selectedimg, setSelectedImg] = React.useState(LandMarkSelectedImage);
+  const cart = useSelector((state) => state.cart);
+
+  const [selectedimg, setSelectedImg] = React.useState(selectedImage);
 
   const dispatch = useDispatch();
 
@@ -53,6 +55,54 @@ const Landmarks = ({
     }, 1000);
   };
 
+  const addToCartHandler = () => {
+    dispatch(AppActions.activateBumpAnimation());
+    setTimeout(() => {
+      dispatch(AppActions.deActivateBumpAnimation());
+    }, 500);
+    dispatch(
+      AppActions.addItem({
+        title,
+        id,
+        stars,
+        selectedImage,
+        images,
+        price,
+        reviews,
+        rating,
+        checkForMediumScreen,
+        idForSelectedHotels,
+      })
+    );
+    dispatch(
+      AppActions.setSelectedLadnmarkId({
+        idForSelectedHotels,
+      })
+    );
+  };
+
+  const removeFromCartHandler = () => {
+    dispatch(
+      AppActions.removeItem({
+        title,
+        id,
+        stars,
+        selectedImage,
+        images,
+        price,
+        reviews,
+        rating,
+        checkForMediumScreen,
+        idForSelectedHotels,
+      })
+    );
+    dispatch(
+      AppActions.removeSelectedLandmarkid({
+        idForSelectedHotels,
+      })
+    );
+  };
+
   return (
     <>
       <Link to="Google-Maps" duration={400} smooth={true}>
@@ -73,9 +123,12 @@ const Landmarks = ({
               border: "3px solid rgb(255, 255, 255)",
               boxShadow: "rgb(19 15 235 / 15%) 1px 2px 20px",
             }}
-            onClick={() => recieveCoordinates(id)}
+            onClick={() => {
+              recieveCoordinates(id);
+              dispatch(AppActions.setSelectedDestination(title));
+            }}
           >
-            <p className="">{LandMarkTitle}</p>
+            <p className="">{title}</p>
             <div className="flex justify-center">
               {starsOfHotel === 2 && (
                 <>
@@ -120,7 +173,7 @@ const Landmarks = ({
 
             {checkForMediumScreen && (
               <div className="grid grid-flow-col gap-0 mt-1 md:px-40 lg:px-0">
-                {LandMarkImages?.map((HotelImage) => (
+                {images?.map((HotelImage) => (
                   <img
                     key={HotelImage.image}
                     src={HotelImage.image}
@@ -134,7 +187,7 @@ const Landmarks = ({
             )}
             {!checkForMediumScreen && (
               <div className="grid grid-flow-col gap-0 mt-1">
-                {LandMarkImages?.map((HotelImage) => (
+                {images?.map((HotelImage) => (
                   <img
                     key={HotelImage}
                     src={HotelImage}
@@ -150,7 +203,7 @@ const Landmarks = ({
               <p className="text-sm text-gray-400">Trip Costs</p>
             </div>
             <div className="flex justify-start -mt-1 mx-4 md:mx-1">
-              <p className="font-medium">USD {PriceToGetThere}</p>
+              <p className="font-medium">USD {price}</p>
             </div>
             <div className="flex justify-end -mt-[2.7rem] mx-4 md:mx-1">
               <div className="">
@@ -168,22 +221,22 @@ const Landmarks = ({
               </div>
             </div>
             <div className="mt-2 flex justify-center">
-              {isAddedInCart ? (
+              {cart.find((item) => item.id === id) ? (
                 <Link to="">
                   <button
-                    onClick={() => setIsAddedInCart(!isAddedInCart)}
-                    className="landmark-cart-btn hover:bg-[#f51767] hover:text-white"
+                    onClick={removeFromCartHandler}
+                    className="landmark-cart-btn-added hover:cursor-pointer"
                   >
-                    <p>add to cart</p>
+                    <p>added</p>
                   </button>
                 </Link>
               ) : (
                 <Link to="">
                   <button
-                    onClick={() => setIsAddedInCart(!isAddedInCart)}
-                    className="landmark-cart-btn-added hover:cursor-pointer"
+                    onClick={addToCartHandler}
+                    className="landmark-cart-btn hover:bg-[#f51767] hover:text-white"
                   >
-                    <p>added</p>
+                    <p>add to cart</p>
                   </button>
                 </Link>
               )}

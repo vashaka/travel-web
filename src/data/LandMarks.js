@@ -1,7 +1,8 @@
 export const LandmarksArray = [
   {
-    id: 1,
-    name: "Mestia , Svaneti",
+    id: "1",
+    idForSelectedHotels: 1,
+    name: "Mestia, Svaneti",
     side: "West Georgia ",
     LandMarkSelectedImage:
       "https://i.ytimg.com/vi/t198p47m_nU/maxresdefault.jpg",
@@ -16,7 +17,7 @@ export const LandmarksArray = [
       "https://static.wixstatic.com/media/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg/v1/fill/w_2000,h_1339,al_c/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg",
       "https://colorup.ge/wp-content/uploads/2019/02/%E1%83%9B%E1%83%94%E1%83%A1%E1%83%A2%E1%83%98%E1%83%90-2.jpg",
     ],
-    PriceToGetThere: "100",
+    PriceToGetThere: 100,
     reviews: "2.123",
     rating: "3.2",
     coordinates: {
@@ -25,7 +26,8 @@ export const LandmarksArray = [
     },
   },
   {
-    id: 2,
+    id: "2",
+    idForSelectedHotels: 2,
     name: "Ushguli",
     side: "West Georgia",
     LandMarkSelectedImage:
@@ -41,7 +43,7 @@ export const LandmarksArray = [
       "https://static.wixstatic.com/media/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg/v1/fill/w_2000,h_1339,al_c/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg",
       "https://colorup.ge/wp-content/uploads/2019/02/%E1%83%9B%E1%83%94%E1%83%A1%E1%83%A2%E1%83%98%E1%83%90-2.jpg",
     ],
-    PriceToGetThere: "100",
+    PriceToGetThere: 100,
     reviews: "2.123",
     rating: "3.2",
     coordinates: {
@@ -50,7 +52,8 @@ export const LandmarksArray = [
     },
   },
   {
-    id: 3,
+    id: "3",
+    idForSelectedHotels: 3,
     name: "Batumi",
     side: "West Georgia",
     LandMarkSelectedImage:
@@ -66,7 +69,7 @@ export const LandmarksArray = [
       "https://static.wixstatic.com/media/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg/v1/fill/w_2000,h_1339,al_c/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg",
       "https://colorup.ge/wp-content/uploads/2019/02/%E1%83%9B%E1%83%94%E1%83%A1%E1%83%A2%E1%83%98%E1%83%90-2.jpg",
     ],
-    PriceToGetThere: "100",
+    PriceToGetThere: 100,
     reviews: "2.123",
     rating: "3.2",
     coordinates: {
@@ -75,7 +78,8 @@ export const LandmarksArray = [
     },
   },
   {
-    id: 4,
+    id: "4",
+    idForSelectedHotels: 4,
     name: "Kazgebi",
     side: "East Georgia",
     LandMarkSelectedImage:
@@ -91,7 +95,7 @@ export const LandmarksArray = [
       "https://static.wixstatic.com/media/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg/v1/fill/w_2000,h_1339,al_c/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg",
       "https://colorup.ge/wp-content/uploads/2019/02/%E1%83%9B%E1%83%94%E1%83%A1%E1%83%A2%E1%83%98%E1%83%90-2.jpg",
     ],
-    PriceToGetThere: "100",
+    PriceToGetThere: 100,
     reviews: "2.123",
     rating: "3.2",
     coordinates: {
@@ -100,7 +104,8 @@ export const LandmarksArray = [
     },
   },
   {
-    id: 5,
+    id: "5",
+    idForSelectedHotels: 5,
     name: "Kakheti",
     side: "East Georgia",
     LandMarkSelectedImage:
@@ -116,7 +121,7 @@ export const LandmarksArray = [
       "https://static.wixstatic.com/media/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg/v1/fill/w_2000,h_1339,al_c/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg",
       "https://colorup.ge/wp-content/uploads/2019/02/%E1%83%9B%E1%83%94%E1%83%A1%E1%83%A2%E1%83%98%E1%83%90-2.jpg",
     ],
-    PriceToGetThere: "100",
+    PriceToGetThere: 100,
     reviews: "2.123",
     rating: "3.2",
     coordinates: {
@@ -125,7 +130,8 @@ export const LandmarksArray = [
     },
   },
   {
-    id: 6,
+    id: "6",
+    idForSelectedHotels: 6,
     name: "Ananuri",
     side: "East Georgia",
     LandMarkSelectedImage:
@@ -141,7 +147,7 @@ export const LandmarksArray = [
       "https://static.wixstatic.com/media/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg/v1/fill/w_2000,h_1339,al_c/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg",
       "https://colorup.ge/wp-content/uploads/2019/02/%E1%83%9B%E1%83%94%E1%83%A1%E1%83%A2%E1%83%98%E1%83%90-2.jpg",
     ],
-    PriceToGetThere: "100",
+    PriceToGetThere: 100,
     reviews: "2.123",
     rating: "3.2",
     coordinates: {
@@ -150,8 +156,8 @@ export const LandmarksArray = [
     },
   },
   {
-    id: 7,
-
+    id: "7",
+    idForSelectedHotels: 7,
     name: "Uflistsikhe",
     side: "East Georgia",
     LandMarkSelectedImage:
@@ -167,7 +173,7 @@ export const LandmarksArray = [
       "https://static.wixstatic.com/media/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg/v1/fill/w_2000,h_1339,al_c/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg",
       "https://colorup.ge/wp-content/uploads/2019/02/%E1%83%9B%E1%83%94%E1%83%A1%E1%83%A2%E1%83%98%E1%83%90-2.jpg",
     ],
-    PriceToGetThere: "100",
+    PriceToGetThere: 100,
     reviews: "2.123",
     rating: "3.2",
     coordinates: {
@@ -176,8 +182,8 @@ export const LandmarksArray = [
     },
   },
   {
-    id: 8,
-
+    id: "8",
+    idForSelectedHotels: 8,
     name: "Tusheti",
     side: "East Georgia",
     LandMarkSelectedImage:
@@ -193,12 +199,66 @@ export const LandmarksArray = [
       "https://static.wixstatic.com/media/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg/v1/fill/w_2000,h_1339,al_c/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg",
       "https://colorup.ge/wp-content/uploads/2019/02/%E1%83%9B%E1%83%94%E1%83%A1%E1%83%A2%E1%83%98%E1%83%90-2.jpg",
     ],
-    PriceToGetThere: "100",
+    PriceToGetThere: 100,
     reviews: "2.123",
     rating: "3.2",
     coordinates: {
       x: 42.4999923,
       y: 45.5000308,
+    },
+  },
+
+  {
+    id: "9",
+    idForSelectedHotels: 9,
+    name: "Borjomi",
+    side: "East Georgia",
+    LandMarkSelectedImage:
+      "https://travellemming.com/wp-content/uploads/Tusheti-Georgia-Itinerary.jpg",
+    description:
+      "If you thought Ushguli was hard to get to, just wait until you hear about Tusheti National Park. This super remote mountainous region is actually closed off for most of the year, impassable by snow and occupied by only a handful of border guards. But in the summer, Georgian herders bring their sheep in and inhabit Tusheti for the summer. It’s quickly becoming one of the most talked-about destinations in Georgia and is high on my own travel list as one of the few Georgian tourist destinations I’ve yet to visit.",
+    destination:
+      "https://www.google.com/maps/search/tusheti/@42.3424191,44.9587348,11z",
+    images: [
+      "https://cdn.georgiantravelguide.com/storage/thumbnails/mestia-in-winter-2.jpg",
+      "https://www.remotelands.com/storage/media/5321/conversions/b210910011-banner-size.jpg",
+      "https://live.staticflickr.com/65535/49547782362_ec47abc390_b.jpg",
+      "https://static.wixstatic.com/media/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg/v1/fill/w_2000,h_1339,al_c/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg",
+      "https://colorup.ge/wp-content/uploads/2019/02/%E1%83%9B%E1%83%94%E1%83%A1%E1%83%A2%E1%83%98%E1%83%90-2.jpg",
+    ],
+    PriceToGetThere: 100,
+    reviews: "2.123",
+    rating: "3.2",
+    coordinates: {
+      x: 41.83333,
+      y: 43.3833318,
+    },
+  },
+
+  {
+    id: 10,
+    idForSelectedHotels: "ten",
+    name: "Bakuriani",
+    side: "East Georgia",
+    LandMarkSelectedImage:
+      "https://travellemming.com/wp-content/uploads/Tusheti-Georgia-Itinerary.jpg",
+    description:
+      "If you thought Ushguli was hard to get to, just wait until you hear about Tusheti National Park. This super remote mountainous region is actually closed off for most of the year, impassable by snow and occupied by only a handful of border guards. But in the summer, Georgian herders bring their sheep in and inhabit Tusheti for the summer. It’s quickly becoming one of the most talked-about destinations in Georgia and is high on my own travel list as one of the few Georgian tourist destinations I’ve yet to visit.",
+    destination:
+      "https://www.google.com/maps/search/tusheti/@42.3424191,44.9587348,11z",
+    images: [
+      "https://cdn.georgiantravelguide.com/storage/thumbnails/mestia-in-winter-2.jpg",
+      "https://www.remotelands.com/storage/media/5321/conversions/b210910011-banner-size.jpg",
+      "https://live.staticflickr.com/65535/49547782362_ec47abc390_b.jpg",
+      "https://static.wixstatic.com/media/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg/v1/fill/w_2000,h_1339,al_c/635632_54f563a02f1f49cd93a7a6a968596cbd~mv2_d_2000_1339_s_2.jpg",
+      "https://colorup.ge/wp-content/uploads/2019/02/%E1%83%9B%E1%83%94%E1%83%A1%E1%83%A2%E1%83%98%E1%83%90-2.jpg",
+    ],
+    PriceToGetThere: 100,
+    reviews: "2.123",
+    rating: "3.2",
+    coordinates: {
+      x: 41.750972,
+      y: 43.529185,
     },
   },
 ];

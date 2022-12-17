@@ -9,7 +9,7 @@ const GeoMap = () => {
   return (
     <div className="flex justify-center">
       {/* Ignore This */}
-      <h1 className="absolute bottom-24 opacity-0" name="Map">
+      <h1 className="absolute bottom-24 opacity-0" name="Plans">
         textForSmoothScroll
       </h1>
       {/* ----------- */}

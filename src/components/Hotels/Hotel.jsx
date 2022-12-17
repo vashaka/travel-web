@@ -6,28 +6,63 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppActions } from "../../redux";
 
 const styles = {
-  img: "h-full rounded-lg hover:scale-110",
+  img: "md:h-[30px] h-[40px] rounded-lg hover:scale-110",
 };
 
 const Hotel = ({
-  HotelTitle,
-  HotelSelectedImage,
+  title,
+  selectedImage,
   stars,
-  HotelImages,
-  priceOnOneDay,
+  images,
+  price,
   reviews,
   rating,
   checkForMediumScreen,
+  id,
 }) => {
-  const [selectedimg, setSelectedImg] = React.useState(HotelSelectedImage);
-
+  const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
-
+  const [selectedimg, setSelectedImg] = React.useState(selectedImage);
   const starsOfHotel = Number(stars);
+
+  const addToCartHandler = () => {
+    dispatch(AppActions.activateBumpAnimation());
+    setTimeout(() => {
+      dispatch(AppActions.deActivateBumpAnimation());
+    }, 500);
+    dispatch(
+      AppActions.addItem({
+        title,
+        selectedImage,
+        stars,
+        images,
+        price,
+        reviews,
+        rating,
+        checkForMediumScreen,
+        id,
+      })
+    );
+  };
+  const removeFromCartHandler = () => {
+    dispatch(
+      AppActions.removeItem({
+        title,
+        selectedImage,
+        stars,
+        images,
+        price,
+        reviews,
+        rating,
+        checkForMediumScreen,
+        id,
+      })
+    );
+  };
   return (
     <div className="w-full col-span-2 md:col-span-1 row-span-1 xl:col-span-1 relative">
       <div
-        className="cursor-pointer	md:hover:scale-105 ease-in duration-300 w-full h-[375px] object-cover"
+        className="md:hover:scale-105 ease-in duration-300 w-full h-[375px] object-cover"
         style={{
           borderRadius: "25px",
           border: "3px solid rgb(255, 255, 255)",
@@ -35,7 +70,7 @@ const Hotel = ({
         }}
         // id="hotels"
       >
-        <p className="">{HotelTitle}</p>
+        <p className="">{title}</p>
         <div className="flex justify-center">
           {starsOfHotel === 2 && (
             <>
@@ -80,7 +115,7 @@ const Hotel = ({
 
         {checkForMediumScreen && (
           <div className="grid grid-flow-col gap-0 mt-1 md:px-40 lg:px-0">
-            {HotelImages?.map((HotelImage) => (
+            {images?.map((HotelImage) => (
               <img
                 key={HotelImage.image}
                 src={HotelImage.image}
@@ -94,7 +129,7 @@ const Hotel = ({
         )}
         {!checkForMediumScreen && (
           <div className="grid grid-flow-col gap-0 mt-1">
-            {HotelImages?.map((HotelImage) => (
+            {images?.map((HotelImage) => (
               <img
                 key={HotelImage}
                 src={HotelImage}
@@ -110,7 +145,7 @@ const Hotel = ({
           <p className="text-sm text-gray-400">1 night, 2 adults</p>
         </div>
         <div className="flex justify-start -mt-1 mx-4 md:mx-1">
-          <p className="font-medium">USD {priceOnOneDay}</p>
+          <p className="font-medium">USD {price}</p>
         </div>
         <div className="flex justify-end -mt-[2.7rem] mx-4 md:mx-1">
           <div className="">
@@ -126,6 +161,24 @@ const Hotel = ({
           >
             <p className="text-[#ededed] font-medium">{rating}</p>
           </div>
+        </div>
+        <div className="flex justify-center">
+          {cart.find((item) => item.id === id) ||
+          cart.find((item) => item.title === title) ? (
+            <button
+              onClick={removeFromCartHandler}
+              className="landmark-cart-btn-added hover:cursor-pointer"
+            >
+              <p>added</p>
+            </button>
+          ) : (
+            <button
+              onClick={addToCartHandler}
+              className="landmark-cart-btn hover:bg-[#f51767] hover:text-white"
+            >
+              <p>add to cart</p>
+            </button>
+          )}
         </div>
       </div>
     </div>
