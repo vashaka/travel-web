@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { useSelector } from "react-redux";
 
+// new-features branch
+
 const Navbar = () => {
   const [scrollTop, setScrollTop] = useState(0);
   const [hideNavbar, setHideNavbar] = useState(true);
