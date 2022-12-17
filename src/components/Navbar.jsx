@@ -66,7 +66,7 @@ const Navbar = () => {
         </div>
 
         {/* Hide on Small Screens */}
-        <ul className="hidden xl:flex items-center sticky mt-1">
+        <ul className="items-center sticky mt-1">
           <li className="cursor-pointer ease-in duration-300">
             <Link to="Plans" smooth={true} duration={400}>
               01. PLANS
@@ -88,7 +88,7 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-        <Link to="cart" smooth={true} duration={400} className="hidden xl:flex">
+        <Link to="cart" smooth={true} duration={400} className="">
           {bumpAnimation ? (
             <button
               // className="cart-btn ml-2 nav-cart-btn"
