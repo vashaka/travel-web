@@ -66,7 +66,7 @@ const Navbar = () => {
         </div>
 
         {/* Hide on Small Screens */}
-        <ul className="items-center sticky mt-1">
+        <ul className="flex items-center sticky mt-1">
           <li className="cursor-pointer ease-in duration-300">
             <Link to="Plans" smooth={true} duration={400}>
               01. PLANS
