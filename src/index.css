@@ -65,6 +65,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .slide {
@@ -77,57 +79,6 @@
   transition-duration: 2s;
   transform: scale(1.08);
 }
-/* 
-.cart-btn {
-  border: 1px solid rgb(245, 23, 103);
-  outline: none;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  width: max-content;
-  border-radius: 999px;
-  height: 40px;
-  font-weight: 600;
-  font-size: 15px;
-  padding: 0px 40px;
-  background-color: #f51767;
-  color: rgb(255, 255, 255);
-}
-
-.cart-btn:hover {
-  border-color: rgb(187, 32, 88);
-  background-color: #bb2058;
-} */
-
-/* .cart-btnActive {
-  border-color: rgb(187, 32, 88);
-  background-color: rgb(187, 32, 88);
-
-  border: 1px solid rgb(187, 32, 88);
-  outline: none;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  width: max-content;
-  border-radius: 999px;
-  height: 40px;
-  font-weight: 600;
-  font-size: 15px;
-  padding: 0px 40px;
-  color: rgb(255, 255, 255);
-} */
 
 .progressMainStyle {
   height: 5px;
@@ -138,9 +89,6 @@
   width: 80%;
   height: 70vh;
   border-radius: 20px;
-
-  /* width: 100%;
-  height: 50vh; */
 }
 
 .map-container-for-small-screens {
@@ -229,13 +177,9 @@ ul li:active::after {
   cursor: pointer;
   display: flex;
   font: inherit;
-  /* flex-direction: column; */
-  /* -webkit-box-align: center; */
   align-items: center;
   -webkit-box-pack: center;
   justify-content: space-around;
-  /* width: max-content; */
-  /* width: auto; */
   border-radius: 999px;
   height: 40px;
   font-weight: 600;
@@ -254,13 +198,9 @@ ul li:active::after {
   cursor: pointer;
   display: flex;
   font: inherit;
-  /* flex-direction: column; */
-  /* -webkit-box-align: center; */
   align-items: center;
   -webkit-box-pack: center;
   justify-content: space-around;
-  /* width: max-content; */
-  /* width: auto; */
   border-radius: 999px;
   height: 40px;
   font-weight: 600;
